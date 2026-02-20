@@ -7,7 +7,7 @@
 size = Vector2(341, 202)
 
 [node name="Base" type="Node2D" unique_id=74876961]
-scale = Vector2(0.76, 0.76)
+scale = Vector2(0.55, 0.55)
 script = ExtResource("1_h5q0x")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1062421259]
