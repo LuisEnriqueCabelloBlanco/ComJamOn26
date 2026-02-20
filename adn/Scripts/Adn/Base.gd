@@ -1,4 +1,4 @@
-extends Node
+extends Grabable
 
 enum BaseType {
 	GUANINE,

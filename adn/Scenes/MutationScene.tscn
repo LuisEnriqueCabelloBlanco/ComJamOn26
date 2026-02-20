@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cxwddtxxobei"]
+
+[ext_resource type="PackedScene" uid="uid://crqqouuu8uq86" path="res://Scenes/AdnCosas/Adn.tscn" id="1_ngeey"]
+[ext_resource type="PackedScene" uid="uid://cuxlll7dmv5sc" path="res://Scenes/AdnCosas/Bases/Base.tscn" id="2_jkokn"]
+
+[node name="MutationScene" type="Node2D" unique_id=1112628153]
+
+[node name="Adn" parent="." unique_id=815589405 instance=ExtResource("1_ngeey")]
+
+[node name="BasePicker" type="Node2D" parent="." unique_id=1641538156]
+
+[node name="Base" parent="BasePicker" unique_id=74876961 instance=ExtResource("2_jkokn")]
+position = Vector2(965, 393)
