@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://w0vv0rdgef2x"]
 
 [ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_ny50u"]
+[ext_resource type="Texture2D" uid="uid://bppuna2korqt6" path="res://Assets/Temporal.png" id="2_gpsgy"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_ydiuu"]
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="3_ytcx7"]
 
@@ -10,29 +11,57 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7dw4"]
+texture = ExtResource("2_gpsgy")
+texture_region_size = Vector2i(256, 256)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, 64, -64, 64)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, 64, -64, 64)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, 64, -64, 64)
+11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, 64, -64, 64)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+11:1/0 = 0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 0, 128, 0, 128, 128, -128, 128)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 0, 128, 0, 128, 128, -128, 128)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 0, 128, 0, 128, 128, -128, 128)
+
 [sub_resource type="TileSet" id="TileSet_sydyy"]
-tile_size = Vector2i(128, 128)
+tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t62tr")
+sources/1 = SubResource("TileSetAtlasSource_f7dw4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytcx7"]
 size = Vector2(128, 126)
 
 [node name="LuisTest" type="Node2D" unique_id=1263526469]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1176251204 node_paths=PackedStringArray("followNode")]
+position = Vector2(344, 503)
+script = ExtResource("3_ytcx7")
+followNode = NodePath("../Player")
+cameraSpeed = 100.0
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1887580150]
-tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAANAAQAAAAAAAAAAAAOAAQAAAAAAAAAAAA=")
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAABAAYAAQAEAAAAAAACAAYAAQAEAAAAAAADAAYAAQAEAAAAAAAEAAYAAQAEAAAAAAAFAAYAAQAEAAAAAAAGAAYAAQAEAAAAAAAHAAYAAQAEAAAAAAAIAAYAAQAFAAAAAAAAAAYAAQADAAAAAAAJAAUAAQAEAAAAAAAIAAUAAQADAAAAAAAKAAUAAQAEAAAAAAALAAUAAQAEAAAAAAAMAAUAAQAEAAAAAAANAAUAAQAFAAAAAAA=")
 tile_set = SubResource("TileSet_sydyy")
 rendering_quadrant_size = 128
 
 [node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_ydiuu")]
 position = Vector2(84, 229)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1176251204 node_paths=PackedStringArray("followNode")]
-position = Vector2(273, 318)
-script = ExtResource("3_ytcx7")
-followNode = NodePath("../Player")
-cameraSpeed = 100.0
 
 [node name="Box" type="RigidBody2D" parent="." unique_id=1334610303]
 position = Vector2(596, 274)

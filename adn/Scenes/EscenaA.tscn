@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://nohtbwkoffmi"]
 
+[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_4gum5"]
+
 [node name="EscenaA" type="Node2D" unique_id=1672784548]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=443220561]
+offset_left = -956.0
+offset_top = -533.0
+offset_right = 970.0
+offset_bottom = 538.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1405899083]
+position = Vector2(88, 427)
+texture = ExtResource("1_4gum5")
