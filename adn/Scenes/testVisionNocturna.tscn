@@ -1,0 +1,46 @@
+[gd_scene format=4 uid="uid://doyb3qsin3mks"]
+
+[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_0w3a6"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_es6b3"]
+[ext_resource type="Script" path="res://Scenes/cameraFollow.gd" id="3_j2q04"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na8qb"]
+texture = ExtResource("1_0w3a6")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_1hmc5"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_na8qb")
+
+[node name="TestVisionNocturna" type="Control" unique_id=939918937]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1115125662]
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAANAAQAAAAAAAAAAAAOAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_1hmc5")
+rendering_quadrant_size = 128
+
+[node name="TileMapInivisble" type="TileMapLayer" parent="." unique_id=1568429199]
+visible = false
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_1hmc5")
+rendering_quadrant_size = 128
+
+[node name="Player" parent="." unique_id=1336915041 node_paths=PackedStringArray("visibleLayer", "invisibleLayer") instance=ExtResource("2_es6b3")]
+position = Vector2(84, 229)
+visibleLayer = NodePath("../TileMapLayer")
+invisibleLayer = NodePath("../TileMapInivisble")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=301425617 node_paths=PackedStringArray("followNode")]
+position = Vector2(573, 323)
+script = ExtResource("3_j2q04")
+followNode = NodePath("../Player")
+cameraSpeed = 100.0

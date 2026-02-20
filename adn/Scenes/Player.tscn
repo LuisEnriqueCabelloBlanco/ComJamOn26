@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bfvy4s72ubmtm"]
 
+[ext_resource type="Script" uid="uid://bixtqgh55xk6v" path="res://Scripts/night_vision_component.gd" id="1_nn08x"]
 [ext_resource type="Script" uid="uid://r5j6ia0oq16v" path="res://Scripts/player.gd" id="1_xhfnw"]
 [ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="2_kne1u"]
 [ext_resource type="Script" uid="uid://ce2u6iny1wxtg" path="res://Scripts/gravity_component.gd" id="2_kpjcp"]
@@ -11,12 +12,13 @@
 radius = 64.0
 height = 128.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1336915041 node_paths=PackedStringArray("gravity_component", "movement_componet", "input_component", "jump_component")]
+[node name="Player" type="CharacterBody2D" unique_id=1336915041 node_paths=PackedStringArray("gravity_component", "movement_componet", "input_component", "jump_component", "night_vision_component")]
 script = ExtResource("1_xhfnw")
 gravity_component = NodePath("GravityComponent")
 movement_componet = NodePath("MovementComponent")
 input_component = NodePath("InputComponent")
 jump_component = NodePath("JumpComponent")
+night_vision_component = NodePath("NightVisionComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=155062871]
 shape = SubResource("CapsuleShape2D_0rwas")
@@ -36,3 +38,7 @@ script = ExtResource("5_cxr5p")
 [node name="JumpComponent" type="Node" parent="." unique_id=167222886]
 script = ExtResource("6_tdg3f")
 jump_velocity = -600.0
+
+[node name="NightVisionComponent" type="Node" parent="." unique_id=1767828531]
+script = ExtResource("1_nn08x")
+metadata/_custom_type_script = "uid://bixtqgh55xk6v"

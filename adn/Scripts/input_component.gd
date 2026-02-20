@@ -9,3 +9,5 @@ func _process(delta: float) -> void:
 func get_jump_input()->bool:
 	return Input.is_action_just_pressed("jump")
 	
+func get_night_vision_input()->bool:
+	return Input.is_action_just_pressed("Vision nocturna")
