@@ -6,16 +6,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8syha"]
 size = Vector2(341, 202)
 
-[node name="Base" type="Node2D" unique_id=74876961]
+[node name="Timina" type="Node2D" unique_id=74876961]
+scale = Vector2(0.76, 0.76)
 script = ExtResource("1_wbvgo")
 baseType = 3
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1062421259]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1606845070]
-position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_8syha")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=329602570]
 scale = Vector2(0.5328125, 0.41770837)
 texture = ExtResource("2_korol")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -1,13 +1,26 @@
 [gd_scene format=3 uid="uid://cxwddtxxobei"]
 
 [ext_resource type="PackedScene" uid="uid://crqqouuu8uq86" path="res://Scenes/AdnCosas/Adn.tscn" id="1_ngeey"]
-[ext_resource type="PackedScene" uid="uid://cuxlll7dmv5sc" path="res://Scenes/AdnCosas/Bases/Base.tscn" id="2_jkokn"]
+[ext_resource type="PackedScene" uid="uid://d0gqxwn20pbi2" path="res://Scenes/AdnCosas/base_holder.tscn" id="2_jkokn"]
+[ext_resource type="PackedScene" uid="uid://dn85q4tl7ugwb" path="res://Scenes/AdnCosas/Bases/Citosina.tscn" id="4_st64n"]
+[ext_resource type="PackedScene" uid="uid://cltk82rjxcc76" path="res://Scenes/AdnCosas/Bases/Guanina.tscn" id="5_pw4gx"]
+[ext_resource type="PackedScene" uid="uid://cuxlll7dmv5sc" path="res://Scenes/AdnCosas/Bases/Timina.tscn" id="6_tmaqv"]
 
 [node name="MutationScene" type="Node2D" unique_id=1112628153]
 
 [node name="Adn" parent="." unique_id=815589405 instance=ExtResource("1_ngeey")]
 
-[node name="BasePicker" type="Node2D" parent="." unique_id=1641538156]
+[node name="Holder1" parent="." unique_id=1838399395 instance=ExtResource("2_jkokn")]
+position = Vector2(1018, 72)
 
-[node name="Base" parent="BasePicker" unique_id=74876961 instance=ExtResource("2_jkokn")]
-position = Vector2(965, 393)
+[node name="Holder2" parent="." unique_id=1401914175 instance=ExtResource("2_jkokn")]
+position = Vector2(1008, 218)
+baseScene = ExtResource("4_st64n")
+
+[node name="Holder3" parent="." unique_id=305582520 instance=ExtResource("2_jkokn")]
+position = Vector2(1001, 417)
+baseScene = ExtResource("5_pw4gx")
+
+[node name="Holder4" parent="." unique_id=876302710 instance=ExtResource("2_jkokn")]
+position = Vector2(1009, 556)
+baseScene = ExtResource("6_tmaqv")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0gqxwn20pbi2"]
+
+[ext_resource type="Script" uid="uid://cdlgsyob2lbyu" path="res://Scripts/Adn/BaseDrawer.gd" id="1_h6y1i"]
+[ext_resource type="PackedScene" uid="uid://bqvhc8v8x676m" path="res://Scenes/AdnCosas/Bases/Adenina.tscn" id="2_gxrxp"]
+
+[node name="Holder1" type="Node2D" unique_id=1838399395]
+script = ExtResource("1_h6y1i")
+baseScene = ExtResource("2_gxrxp")
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
