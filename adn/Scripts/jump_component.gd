@@ -1,0 +1,14 @@
+class_name JumpComponent
+extends Node
+
+@export_subgroup("Settings")
+#tener en cuenta que godot trabaja en coordenadas de pantalla
+@export var jump_velocity:float = -350
+
+var is_jumping: bool = false
+
+func handle_jump(body:CharacterBody2D, want_to_jump:bool)->void:
+	if want_to_jump and body.is_on_floor():
+		body.velocity.y = jump_velocity
+	
+	is_jumping = body.velocity.y < 0 and body.is_on_floor()

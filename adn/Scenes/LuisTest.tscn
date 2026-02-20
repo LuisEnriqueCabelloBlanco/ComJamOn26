@@ -1,0 +1,23 @@
+[gd_scene format=4 uid="uid://w0vv0rdgef2x"]
+
+[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_ny50u"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_ydiuu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t62tr"]
+texture = ExtResource("1_ny50u")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_sydyy"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_t62tr")
+
+[node name="LuisTest" type="Node2D" unique_id=1263526469]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1887580150]
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_sydyy")
+rendering_quadrant_size = 128
+
+[node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_ydiuu")]

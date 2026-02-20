@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bw4y677p8ee0k"]
+
+[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_sg53r"]
+
+[node name="Node2D" type="Node2D" unique_id=532749103]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=252766161]
+disable_3d = true
+size = Vector2i(1920, 1080)
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport" unique_id=1126992338]
+position = Vector2(-1, -649)
+
+[node name="Sprite2D2" type="Sprite2D" parent="SubViewport" unique_id=852042234]
+position = Vector2(0, -656)
+texture = ExtResource("1_sg53r")
+
+[node name="SubViewport2" type="SubViewport" parent="." unique_id=391160321]
+disable_3d = true
+size = Vector2i(1920, 1080)
+
+[node name="Camera2D2" type="Camera2D" parent="SubViewport2" unique_id=1111175899]
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport2" unique_id=1665195702]
+texture = ExtResource("1_sg53r")
