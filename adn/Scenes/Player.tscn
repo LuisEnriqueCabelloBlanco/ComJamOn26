@@ -35,3 +35,4 @@ script = ExtResource("5_cxr5p")
 
 [node name="JumpComponent" type="Node" parent="." unique_id=167222886]
 script = ExtResource("6_tdg3f")
+jump_velocity = -600.0

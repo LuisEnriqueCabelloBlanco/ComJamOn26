@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://crqqouuu8uq86"]
+
+[ext_resource type="Script" uid="uid://lcy2t0t2iqua" path="res://Scripts/Adn/Adn.gd" id="1_3jf5d"]
+[ext_resource type="PackedScene" uid="uid://c2stsuh0u16k8" path="res://Scenes/AdnCosas/Link.tscn" id="2_babhw"]
+
+[node name="AdnScene" type="Node2D" unique_id=815589405]
+script = ExtResource("1_3jf5d")
+
+[node name="Link1" parent="." unique_id=889691434 instance=ExtResource("2_babhw")]
+
+[node name="Link2" parent="." unique_id=326310663 instance=ExtResource("2_babhw")]
+
+[node name="Link3" parent="." unique_id=2113056950 instance=ExtResource("2_babhw")]
+
+[node name="Link4" parent="." unique_id=1154756860 instance=ExtResource("2_babhw")]
+
+[node name="Link5" parent="." unique_id=1228803178 instance=ExtResource("2_babhw")]
