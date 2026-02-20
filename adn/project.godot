@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="ADN"
+run/main_scene="uid://w0vv0rdgef2x"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="ADN"
 
 [input]
 

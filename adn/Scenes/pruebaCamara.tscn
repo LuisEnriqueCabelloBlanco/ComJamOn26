@@ -2,24 +2,45 @@
 
 [ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_sg53r"]
 
-[node name="Node2D" type="Node2D" unique_id=532749103]
+[node name="Node2D" type="Control" unique_id=1259430076]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=252766161]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=3675290]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="UpperVPContainer" type="SubViewportContainer" parent="VBoxContainer" unique_id=69609330]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+
+[node name="PlayerViewport" type="SubViewport" parent="VBoxContainer/UpperVPContainer" unique_id=252766161]
 disable_3d = true
-size = Vector2i(1920, 1080)
+handle_input_locally = false
+size = Vector2i(1920, 500)
+render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="SubViewport" unique_id=1126992338]
+[node name="LevelCamera" type="Camera2D" parent="VBoxContainer/UpperVPContainer/PlayerViewport" unique_id=1126992338]
 position = Vector2(-1, -649)
 
-[node name="Sprite2D2" type="Sprite2D" parent="SubViewport" unique_id=852042234]
-position = Vector2(0, -656)
+[node name="Sprite2D2" type="Sprite2D" parent="VBoxContainer/UpperVPContainer/PlayerViewport" unique_id=852042234]
+position = Vector2(268, 167)
 texture = ExtResource("1_sg53r")
 
-[node name="SubViewport2" type="SubViewport" parent="." unique_id=391160321]
+[node name="LowerVPContainer" type="SubViewportContainer" parent="VBoxContainer" unique_id=151863287]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="StringViewport" type="SubViewport" parent="VBoxContainer/LowerVPContainer" unique_id=391160321]
 disable_3d = true
-size = Vector2i(1920, 1080)
+handle_input_locally = false
+size = Vector2i(1920, 500)
+render_target_update_mode = 4
 
-[node name="Camera2D2" type="Camera2D" parent="SubViewport2" unique_id=1111175899]
+[node name="StringCamera" type="Camera2D" parent="VBoxContainer/LowerVPContainer/StringViewport" unique_id=1111175899]
 
-[node name="Sprite2D" type="Sprite2D" parent="SubViewport2" unique_id=1665195702]
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/LowerVPContainer/StringViewport" unique_id=1665195702]
+position = Vector2(256, 149)
 texture = ExtResource("1_sg53r")
