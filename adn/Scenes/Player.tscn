@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bixtqgh55xk6v" path="res://Scripts/night_vision_component.gd" id="1_nn08x"]
 [ext_resource type="Script" uid="uid://r5j6ia0oq16v" path="res://Scripts/player.gd" id="1_xhfnw"]
-[ext_resource type="Script" uid="uid://ce2u6iny1wxtg" path="res://Scripts/gravity_component.gd" id="2_kpjcp"]
+[ext_resource type="Script" path="res://Scripts/gravity_component.gd" id="2_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bryhdj2uyx728" path="res://Assets/Spritesheets/Running spritesheet(2).png" id="2_yoq75"]
 [ext_resource type="Texture2D" uid="uid://14qv2nakludh" path="res://Assets/Spritesheets/Jumping Down spritesheet.png" id="3_yoq75"]
 [ext_resource type="Script" uid="uid://dsrw4x0alyvde" path="res://Scripts/input_component.gd" id="4_e80uo"]
 [ext_resource type="Texture2D" uid="uid://bak1pk3ncdg88" path="res://Assets/Spritesheets/Jumping spritesheet(2).png" id="4_yoq75"]
-[ext_resource type="Script" uid="uid://bvs13gkx2i14h" path="res://Scripts/movement_component.gd" id="5_cxr5p"]
+[ext_resource type="Script" path="res://Scripts/movement_component.gd" id="5_cxr5p"]
 [ext_resource type="Script" uid="uid://dj6uu5nj5hwjc" path="res://Scripts/jump_component.gd" id="6_tdg3f"]
 [ext_resource type="PackedScene" uid="uid://4631y3o4xguo" path="res://Scenes/Components/AnimatonComponent.tscn" id="10_yoq75"]
 [ext_resource type="Script" uid="uid://b0grppxn5bjqt" path="res://Scripts/push_component.gd" id="11_ksbbd"]
@@ -246,11 +246,12 @@ script = ExtResource("4_e80uo")
 
 [node name="MovementComponent" type="Node" parent="." unique_id=1367383793]
 script = ExtResource("5_cxr5p")
-speed = 200.0
+speed = 250.0
 
 [node name="JumpComponent" type="Node" parent="." unique_id=167222886]
 script = ExtResource("6_tdg3f")
 jump_velocity = -600.0
+jump_multiplier = 1.35
 
 [node name="NightVisionComponent" type="Node" parent="." unique_id=1767828531]
 script = ExtResource("1_nn08x")

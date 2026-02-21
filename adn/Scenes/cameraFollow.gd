@@ -6,7 +6,7 @@ extends Camera2D
 @export var followNode:Node2D
 
 @export_subgroup("Settings")
-@export var cameraSpeed:float
+@export var cameraSpeed:float = 150
 @export var cameraMargin:float = 50
 
 func _process(delta: float) -> void:

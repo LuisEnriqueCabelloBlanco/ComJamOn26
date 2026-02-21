@@ -3,12 +3,27 @@ extends Node
 
 @export_subgroup("Settings")
 #tener en cuenta que godot trabaja en coordenadas de pantalla
-@export var jump_velocity:float = -350
+@export var jump_velocity: float = -350
+@export var jump_multiplier: float = 2.0
 
+@export var aditional_jump = false
 var is_jumping: bool = false
+
+func _ready() -> void:
+	GameManager.pattern1.connect(set_aditional_jump)
 
 func handle_jump(body:CharacterBody2D, want_to_jump:bool)->void:
 	if want_to_jump and body.is_on_floor():
-		body.velocity.y = jump_velocity
-	
+		var adjustedVelocity = Vector2(0,0)
+		var player = body as Player
+		if player.platform != null:
+			adjustedVelocity -= player.platform.velocity
+		if aditional_jump:
+			body.velocity.y = jump_velocity * jump_multiplier + adjustedVelocity.y
+		else:
+			body.velocity.y = jump_velocity + adjustedVelocity.y
+
 	is_jumping = body.velocity.y < 0 and not body.is_on_floor()
+
+func set_aditional_jump(b: bool) -> void:
+	aditional_jump = b
