@@ -12,12 +12,9 @@ config_version=5
 
 config/name="ADN"
 run/main_scene="uid://bqg2or04gtard"
-=======
-run/main_scene="uid://bqg2or04gtard"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
-"<<<<<<<HEAD[display]window/size/viewport_width"=1920
-window/size/viewport_height=1937
+window/size/viewport_width=1920
 
 [autoload]
 
