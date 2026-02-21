@@ -4,14 +4,13 @@ class_name MovingPlatform
 @export var points: Array[Node2D]
 # indica si va hacia adelante por el array o a la inversa
 var forward = true
-# el movimiento aplicado durante el ultimo frame
 var velocity = Vector2(0,0)
 @export var target = 0
 @export var speed = 200
 
 func _physics_process(delta: float) -> void:
 	var target_position = points[target].global_position
-
+	
 	var direction = (target_position - global_position).normalized()
 	if global_position.distance_to(target_position) < 5:
 		siguiente_punto()
@@ -32,6 +31,7 @@ func siguiente_punto():
 		else:
 			forward = true
 			target += 1
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
