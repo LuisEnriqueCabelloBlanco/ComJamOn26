@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Button.tscn" id="4_8jm6e"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/box.tscn" id="5_0g47n"]
 [ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Door.tscn" id="7_clbgy"]
+[ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Platforms/chamber_goal.tscn" id="8_seoxu"]
+[ext_resource type="PackedScene" uid="uid://cw1o1vswfu6d3" path="res://Scenes/Cambers/Chamber2.tscn" id="9_s33b7"]
 
 [node name="Chamber1" type="Node2D" unique_id=320689683]
 
@@ -16,7 +18,6 @@ limit_left = -10000101
 limit_right = 2043
 script = ExtResource("1_k2ok7")
 followNode = NodePath("../Player")
-cameraSpeed = 150.0
 
 [node name="Parallax2D" type="Parallax2D" parent="Camera2D" unique_id=1526738488]
 autoscroll = Vector2(50, 0)
@@ -45,6 +46,10 @@ position = Vector2(488, 725)
 
 [node name="Door" parent="." unique_id=527798983 instance=ExtResource("7_clbgy")]
 position = Vector2(1471, 767)
+
+[node name="ChamberGoal" parent="." unique_id=952817552 instance=ExtResource("8_seoxu")]
+position = Vector2(1852, 862)
+nextScene = ExtResource("9_s33b7")
 
 [connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
 [connection signal="buttonReleased" from="Button" to="Door" method="_on_button_button_released"]
