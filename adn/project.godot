@@ -17,6 +17,10 @@ config/icon="res://icon.svg"
 "<<<<<<<HEAD[display]window/size/viewport_width"=1920
 window/size/viewport_height=1080
 
+[autoload]
+
+GameManager="*uid://bv2ts8vqv6u1w"
+
 [display]
 
 window/size/viewport_width=1920

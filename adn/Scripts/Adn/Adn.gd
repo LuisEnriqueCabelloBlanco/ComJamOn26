@@ -13,7 +13,8 @@ func _ready() -> void:
 	var nodes = get_children()
 	
 	for node in nodes:
-		links.push_back(node as Link)
+		if node is Link:
+			links.push_back(node as Link)
 
 ## Recorre la lista de las bases actualmente seleccionadas y activar o desactiva powerups en función
 func UpdateMutations():
@@ -36,4 +37,7 @@ func ResolvePatern3() -> bool:
 	if links[0].base != null && links[0].base.baseType == Base.BaseType.ADENINE:
 		return true
 	return false
-	
+
+func ClearLinks():
+	for link in links:
+		link.DropBase()
