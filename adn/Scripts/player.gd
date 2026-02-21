@@ -24,4 +24,18 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _ready() -> void:
+	GameManager.pattern1.connect(powerUp1)
+	GameManager.pattern2.connect(powerUp2)
+	GameManager.pattern3.connect(powerUp3)
+	
 	night_vision_component.loadNVCLayers(visibleLayer, invisibleLayer)
+	
+func powerUp1(active:bool):
+	night_vision_component.toggleNightVision(active)
+	print(active)
+
+func powerUp2(active:bool):
+	print(active)
+	
+func powerUp3(active:bool):
+	print(active)

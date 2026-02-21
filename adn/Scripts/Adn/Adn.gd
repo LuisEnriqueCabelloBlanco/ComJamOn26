@@ -42,3 +42,4 @@ func ResolvePatern3() -> bool:
 func ClearLinks():
 	for link in links:
 		link.DropBase()
+	UpdateMutations()
