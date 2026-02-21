@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_0g47n"]
 [ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Button.tscn" id="4_8jm6e"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/box.tscn" id="5_0g47n"]
+[ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Door.tscn" id="7_clbgy"]
 
 [node name="Chamber1" type="Node2D" unique_id=320689683]
 
@@ -37,3 +38,14 @@ position = Vector2(889, 912)
 
 [node name="Box" parent="." unique_id=2042465066 instance=ExtResource("5_0g47n")]
 position = Vector2(488, 725)
+
+[node name="Door" parent="." unique_id=527798983 instance=ExtResource("7_clbgy")]
+position = Vector2(1471, 767)
+
+[node name="Door2" parent="." unique_id=215706727 instance=ExtResource("7_clbgy")]
+position = Vector2(1208, 500)
+
+[connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
+[connection signal="buttonPressed" from="Button" to="Door2" method="_on_button_button_pressed"]
+[connection signal="buttonReleased" from="Button" to="Door" method="_on_button_button_released"]
+[connection signal="buttonReleased" from="Button" to="Door2" method="_on_button_button_released"]
