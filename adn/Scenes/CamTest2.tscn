@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chjgqw2luivif"]
 
-[ext_resource type="PackedScene" uid="uid://w0vv0rdgef2x" path="res://Scenes/LuisTest.tscn" id="1_g1kca"]
+[ext_resource type="PackedScene" path="res://Scenes/LuisTest.tscn" id="1_g1kca"]
 [ext_resource type="PackedScene" uid="uid://cxwddtxxobei" path="res://Scenes/MutationScene.tscn" id="2_g1kca"]
 
 [node name="CamTest2" type="Control" unique_id=1002739137]
@@ -45,7 +45,7 @@ stretch = true
 mouse_target = true
 
 [node name="SubViewport" type="SubViewport" parent="MarginContainer/VBoxContainer/SubViewportContainer2" unique_id=1050228942]
-handle_input_locally = false
+physics_object_picking = true
 size = Vector2i(1320, 538)
 size_2d_override = Vector2i(1920, 1080)
 size_2d_override_stretch = true
