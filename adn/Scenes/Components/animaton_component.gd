@@ -11,7 +11,6 @@ func handle_horizontal_flip(move_dir: float)->void:
 	
 func handle_move_animaton(move_direcction:float)->void:
 	handle_horizontal_flip(move_direcction)
-	
 	if move_direcction != 0:
 		sprite.play("default")
 

@@ -8,19 +8,19 @@
 script = ExtResource("1_3jf5d")
 
 [node name="Link1" parent="." unique_id=889691434 instance=ExtResource("2_babhw")]
-position = Vector2(966, 173)
+position = Vector2(920, 172)
 
 [node name="Link2" parent="." unique_id=326310663 instance=ExtResource("2_babhw")]
-position = Vector2(982, 910)
+position = Vector2(920, 910)
 
 [node name="Link3" parent="." unique_id=2113056950 instance=ExtResource("2_babhw")]
-position = Vector2(975, 740)
+position = Vector2(1059, 740)
 
 [node name="Link4" parent="." unique_id=1154756860 instance=ExtResource("2_babhw")]
-position = Vector2(970, 572)
+position = Vector2(920, 572)
 
 [node name="Link5" parent="." unique_id=1228803178 instance=ExtResource("2_babhw")]
-position = Vector2(975, 385)
+position = Vector2(1059, 385)
 
 [node name="ResetButton" parent="." unique_id=1285341756 instance=ExtResource("3_babhw")]
-position = Vector2(1303, 184)
+position = Vector2(1500, 163)

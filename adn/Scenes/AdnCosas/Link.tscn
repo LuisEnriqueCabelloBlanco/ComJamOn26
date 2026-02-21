@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://c2stsuh0u16k8"]
 
 [ext_resource type="Script" uid="uid://bi0y0qt7j6ou5" path="res://Scripts/Adn/Link.gd" id="1_m0oof"]
+[ext_resource type="Texture2D" uid="uid://8hrwoxp3ilq3" path="res://Assets/INTERFAZ etilo de tecla 2 TAMAÑO AJUSTADO.png" id="2_dtl2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0oof"]
 size = Vector2(181, 126)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m0oof"]
 
 [node name="Link" type="Node2D" unique_id=889691434]
 script = ExtResource("1_m0oof")
@@ -18,7 +17,8 @@ script = ExtResource("1_m0oof")
 shape = SubResource("RectangleShape2D_m0oof")
 
 [node name="Sprite2D" type="Sprite2D" parent="BaseHolder" unique_id=1258350464]
-scale = Vector2(180.00002, 124)
-texture = SubResource("PlaceholderTexture2D_m0oof")
+position = Vector2(-53, 0)
+scale = Vector2(1.4069488, 0.9692308)
+texture = ExtResource("2_dtl2n")
 
 [node name="Complementario" type="Node2D" parent="." unique_id=1782493116]
