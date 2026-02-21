@@ -11,16 +11,16 @@
 [node name="Adn" parent="." unique_id=815589405 instance=ExtResource("1_ngeey")]
 
 [node name="Holder1" parent="." unique_id=1838399395 instance=ExtResource("2_jkokn")]
-position = Vector2(1018, 72)
+position = Vector2(101, 331)
 
 [node name="Holder2" parent="." unique_id=1401914175 instance=ExtResource("2_jkokn")]
-position = Vector2(1008, 218)
+position = Vector2(424, 377)
 baseScene = ExtResource("4_st64n")
 
 [node name="Holder3" parent="." unique_id=305582520 instance=ExtResource("2_jkokn")]
-position = Vector2(1001, 417)
+position = Vector2(146, 680)
 baseScene = ExtResource("5_pw4gx")
 
 [node name="Holder4" parent="." unique_id=876302710 instance=ExtResource("2_jkokn")]
-position = Vector2(1009, 556)
+position = Vector2(480, 694)
 baseScene = ExtResource("6_tmaqv")

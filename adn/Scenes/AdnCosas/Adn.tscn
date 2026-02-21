@@ -7,21 +7,16 @@
 script = ExtResource("1_3jf5d")
 
 [node name="Link1" parent="." unique_id=889691434 instance=ExtResource("2_babhw")]
-position = Vector2(700, 25)
-rotation = 0.36065584
+position = Vector2(966, 173)
 
 [node name="Link2" parent="." unique_id=326310663 instance=ExtResource("2_babhw")]
-position = Vector2(126, 460)
-rotation = 0.52958363
+position = Vector2(982, 910)
 
 [node name="Link3" parent="." unique_id=2113056950 instance=ExtResource("2_babhw")]
-position = Vector2(271, 337)
-rotation = 0.6801816
+position = Vector2(975, 740)
 
 [node name="Link4" parent="." unique_id=1154756860 instance=ExtResource("2_babhw")]
-position = Vector2(458, 277)
-rotation = 0.6076771
+position = Vector2(970, 572)
 
 [node name="Link5" parent="." unique_id=1228803178 instance=ExtResource("2_babhw")]
-position = Vector2(597.99994, 157.99998)
-rotation = 0.647936
+position = Vector2(975, 385)

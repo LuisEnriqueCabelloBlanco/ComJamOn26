@@ -1,8 +1,11 @@
 extends Node2D
 class_name Link
 
+## El desplazamiento con respecto a la base colocada de la complementaria
+@export var complementaryBaseOffset : int
 ## Representa un eslabón en la cadena sobre el que colocar una base
 var base : Base
+const basesPath = "res://Scenes/AdnCosas/Bases/"
 
 # Pone una base en este eslabón de la cadena. 
 func PutInBase(base : Base):
