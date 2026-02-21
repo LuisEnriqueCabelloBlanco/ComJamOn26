@@ -7,10 +7,11 @@ extends Camera2D
 
 @export_subgroup("Settings")
 @export var cameraSpeed:float
+@export var cameraMargin:float = 50
 
 func _process(delta: float) -> void:
-	if(self.position.x - followNode.position.x) > 100:
+	if(self.position.x - followNode.position.x) > cameraMargin:
 		self.position.x -=cameraSpeed*delta
-	elif (self.position.x - followNode.position.x) < -100:
+	elif (self.position.x - followNode.position.x) < -cameraMargin:
 		self.position.x +=cameraSpeed*delta
 		

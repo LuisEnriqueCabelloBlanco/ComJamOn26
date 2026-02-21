@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4631y3o4xguo"]
+
+[ext_resource type="Script" uid="uid://dr8gyxv4ebj73" path="res://Scenes/Components/animaton_component.gd" id="1_7vaxh"]
+
+[node name="AnimatonComponent" type="Node" unique_id=1077718319]
+script = ExtResource("1_7vaxh")

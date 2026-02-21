@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://unw8ep7sko8y"
-path="res://.godot/imported/TileMapTemp.png-b690fd156c3b2a1ee3ca6761132959b3.ctex"
+uid="uid://bm816itmpkylk"
+path="res://.godot/imported/JumpingDown spritesheet.png-d929a65396807c141f2a4e57b4f4443f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileMapTemp.png"
-dest_files=["res://.godot/imported/TileMapTemp.png-b690fd156c3b2a1ee3ca6761132959b3.ctex"]
+source_file="res://Assets/Spritesheets/JumpingDown spritesheet.png"
+dest_files=["res://.godot/imported/JumpingDown spritesheet.png-d929a65396807c141f2a4e57b4f4443f.ctex"]
 
 [params]
 

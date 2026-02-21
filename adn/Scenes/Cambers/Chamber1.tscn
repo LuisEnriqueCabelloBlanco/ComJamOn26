@@ -1,0 +1,39 @@
+[gd_scene format=4 uid="uid://bqg2or04gtard"]
+
+[ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_k2ok7"]
+[ext_resource type="TileSet" uid="uid://dng7l66yt0an" path="res://tileSet.tres" id="2_8jm6e"]
+[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="2_spenh"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_0g47n"]
+[ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Button.tscn" id="4_8jm6e"]
+[ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/box.tscn" id="5_0g47n"]
+
+[node name="Chamber1" type="Node2D" unique_id=320689683]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1990047223 node_paths=PackedStringArray("followNode")]
+position = Vector2(123, 503)
+script = ExtResource("1_k2ok7")
+followNode = NodePath("../Player")
+cameraSpeed = 150.0
+
+[node name="Parallax2D" type="Parallax2D" parent="Camera2D" unique_id=1526738488]
+autoscroll = Vector2(50, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Parallax2D" unique_id=820519150]
+position = Vector2(-332.096, 1)
+scale = Vector2(9.7485, 8.4375)
+texture = ExtResource("2_spenh")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1035849669]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAAFAAcABgACAAMAAAAGAAcABgACAAMAAAAHAAcABgACAAMAAAAIAAcABgACAAMAAAAJAAcABgACAAMAAAAKAAcABgACAAMAAAALAAEAAwABAAEAAAALAAIAAwABAAEAAAALAAMAAwABAAEAAAALAAQAAwABAAEAAAD7/wYABgABAAMAAAD7/wcABgAAAAMAAAD8/wYABgACAAMAAAD8/wcABgACAAQAAAD9/wYABgACAAMAAAD9/wcABgACAAQAAAD+/wYABgACAAMAAAD+/wcABgACAAQAAAD//wYABgACAAMAAAD//wcABgACAAQAAAAAAAYABgACAAMAAAAAAAcABgACAAQAAAABAAYABgACAAMAAAABAAcABgACAAQAAAACAAYABgACAAMAAAACAAcABgACAAQAAAADAAYABgACAAMAAAADAAcABgACAAQAAAAEAAYABgAGAAMAAAAEAAcABgAGAAQAAAAEAAgABgADAAQAAAADAAgABgADAAQAAAACAAgABgADAAQAAAABAAgABgADAAQAAAAAAAgABgADAAQAAAD//wgABgADAAQAAAD+/wgABgADAAQAAAD9/wgABgADAAQAAAD8/wgABgADAAQAAAD7/wgABgAAAAMAAAAFAAgABgACAAQAAAAGAAgABgACAAQAAAAHAAgABgACAAQAAAAIAAgABgACAAQAAAAJAAgABgACAAQAAAAKAAgABgACAAQAAAALAAcABgACAAMAAAAMAAcABgACAAMAAAALAAgABgACAAQAAAAMAAgABgACAAQAAAA=")
+tile_set = ExtResource("2_8jm6e")
+rendering_quadrant_size = 128
+
+[node name="Player" parent="." unique_id=1336915041 instance=ExtResource("3_0g47n")]
+position = Vector2(-182, 717)
+
+[node name="Button" parent="." unique_id=44048984 instance=ExtResource("4_8jm6e")]
+position = Vector2(889, 912)
+
+[node name="Box" parent="." unique_id=2042465066 instance=ExtResource("5_0g47n")]
+position = Vector2(488, 725)
