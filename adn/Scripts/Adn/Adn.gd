@@ -19,10 +19,18 @@ func _ready() -> void:
 ## Recorre la lista de las bases actualmente seleccionadas y activar o desactiva powerups en función
 func UpdateMutations():
 	var mutationCont = get_parent() as MutationController
-	print(ResolvePatern1(),ResolvePatern2(),ResolvePatern3())
-	mutationCont.patern1.emit(ResolvePatern1())
-	mutationCont.patern2.emit(ResolvePatern2())
-	mutationCont.patern3.emit(ResolvePatern3())
+	#Se asegura de que todos los links tengan base
+	var flag = true
+	var i = 0
+	while flag == true && i < links.size():
+		if links[i].base == null:
+			flag = false
+		i += 1
+	if flag:
+		print(ResolvePatern1(),ResolvePatern2(),ResolvePatern3())
+		mutationCont.patern1.emit(ResolvePatern1())
+		mutationCont.patern2.emit(ResolvePatern2())
+		mutationCont.patern3.emit(ResolvePatern3())
 
 func ResolvePatern1() -> bool:
 	if links[0].base != null && links[0].base.baseType == Base.BaseType.THYMINE:

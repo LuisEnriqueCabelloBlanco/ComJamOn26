@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dic2x2fp54ymh"]
+
+[ext_resource type="Texture2D" uid="uid://cgcuij02cj1x7" path="res://Assets/PlaceholdersGuapos/movingplatform.png" id="1_mhemh"]
+[ext_resource type="Script" uid="uid://76xjg3wj5wsq" path="res://Scripts/moving_platform.gd" id="2_e4ktn"]
+
+[node name="MovingPlatdorm" type="Node2D" unique_id=562968531]
+script = ExtResource("2_e4ktn")
+goingTo = null
+speed = null
+
+[node name="MovingplatformSprite" type="Sprite2D" parent="." unique_id=259665446]
+position = Vector2(438, 504)
+texture = ExtResource("1_mhemh")
