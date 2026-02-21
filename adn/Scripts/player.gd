@@ -6,6 +6,7 @@ class_name Player
 @export var movement_componet:MovementComponent
 @export var input_component:InputComponent
 @export var jump_component:JumpComponent
+@export var push_component:PushComponent
 @export var night_vision_component:NightVisionComponent
 @export var animaton_component:AnimationComponent
 
@@ -23,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	animaton_component.handle_jump_animation(jump_component.is_jumping,gravity_component.is_falling)
 	if not jump_component.is_jumping and not gravity_component.is_falling:
 		animaton_component.handle_move_animaton(input_component.input_horizontal)
+	push_component.handle_pushing(self)
 	night_vision_component.toggleNightVision(input_component.get_night_vision_input())
 	move_and_slide()
 
