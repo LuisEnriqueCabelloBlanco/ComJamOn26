@@ -1,0 +1,69 @@
+[gd_scene format=4 uid="uid://df81w40wvgktr"]
+
+[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_a7r3u"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_w4dft"]
+[ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="3_m35n6"]
+[ext_resource type="Script" uid="uid://cdhc5vro56cfj" path="res://Scripts/BoxTestPlayer.gd" id="3_w4dft"]
+[ext_resource type="Script" uid="uid://bm42r2oxq06ym" path="res://Scripts/wooden_box.gd" id="5_xyfti"]
+[ext_resource type="Script" uid="uid://bksuh2dgvlnbr" path="res://Scripts/metal_box.gd" id="6_4nrm4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyfti"]
+texture = ExtResource("1_a7r3u")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_4nrm4"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_xyfti")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xfy1"]
+size = Vector2(128, 126)
+
+[node name="GillTest" type="Node2D" unique_id=1111986255]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=469054611]
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAANAAQAAAAAAAAAAAAOAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_4nrm4")
+rendering_quadrant_size = 128
+
+[node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_w4dft")]
+position = Vector2(80, 300)
+scale = Vector2(-1, 1)
+collision_layer = 1
+collision_mask = 3
+script = ExtResource("3_w4dft")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2053727688 node_paths=PackedStringArray("followNode")]
+position = Vector2(273, 318)
+script = ExtResource("3_m35n6")
+followNode = NodePath("../Player")
+cameraSpeed = 100.0
+
+[node name="WoodBox" type="RigidBody2D" parent="." unique_id=916340533]
+position = Vector2(596, 274)
+collision_mask = 7
+lock_rotation = true
+script = ExtResource("5_xyfti")
+
+[node name="WoodBoxSprite" type="Sprite2D" parent="WoodBox" unique_id=883833678]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("1_a7r3u")
+
+[node name="WoodCollision" type="CollisionShape2D" parent="WoodBox" unique_id=150057391]
+shape = SubResource("RectangleShape2D_2xfy1")
+
+[node name="MetalBox" type="RigidBody2D" parent="." unique_id=1939977636]
+position = Vector2(296, 274)
+collision_mask = 7
+gravity_scale = 2.5
+lock_rotation = true
+script = ExtResource("6_4nrm4")
+
+[node name="MetalBoxSprite" type="Sprite2D" parent="MetalBox" unique_id=906012749]
+modulate = Color(0.80784315, 0.1882353, 0.050980393, 1)
+texture = ExtResource("1_a7r3u")
+
+[node name="MetalCollision" type="CollisionShape2D" parent="MetalBox" unique_id=1744067900]
+shape = SubResource("RectangleShape2D_2xfy1")

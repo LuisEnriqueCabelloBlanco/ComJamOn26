@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bvs13gkx2i14h" path="res://Scripts/movement_component.gd" id="5_cxr5p"]
 [ext_resource type="Script" uid="uid://dj6uu5nj5hwjc" path="res://Scripts/jump_component.gd" id="6_tdg3f"]
 [ext_resource type="PackedScene" uid="uid://4631y3o4xguo" path="res://Scenes/Components/AnimatonComponent.tscn" id="10_yoq75"]
+[ext_resource type="Script" uid="uid://b0grppxn5bjqt" path="res://Scripts/push_component.gd" id="11_ksbbd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rwas"]
 radius = 35.0
@@ -215,13 +216,14 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1336915041 node_paths=PackedStringArray("gravity_component", "movement_componet", "input_component", "jump_component", "night_vision_component", "animaton_component")]
+[node name="Player" type="CharacterBody2D" unique_id=1336915041 node_paths=PackedStringArray("gravity_component", "movement_componet", "input_component", "jump_component", "push_component", "night_vision_component", "animaton_component")]
 collision_layer = 3
 script = ExtResource("1_xhfnw")
 gravity_component = NodePath("GravityComponent")
 movement_componet = NodePath("MovementComponent")
 input_component = NodePath("InputComponent")
 jump_component = NodePath("JumpComponent")
+push_component = NodePath("PushComponent")
 night_vision_component = NodePath("NightVisionComponent")
 animaton_component = NodePath("AnimatonComponent")
 
@@ -258,3 +260,6 @@ metadata/_custom_type_script = "uid://bixtqgh55xk6v"
 
 [node name="AnimatonComponent" parent="." unique_id=1077718319 node_paths=PackedStringArray("sprite") instance=ExtResource("10_yoq75")]
 sprite = NodePath("../Sprite2D")
+
+[node name="PushComponent" type="Node" parent="." unique_id=169712391]
+script = ExtResource("11_ksbbd")
