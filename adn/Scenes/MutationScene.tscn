@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://cxwddtxxobei"]
 
+[ext_resource type="Script" uid="uid://cukspc1hegh3i" path="res://Scripts/MutationSceneController.gd" id="1_i2nsj"]
 [ext_resource type="PackedScene" uid="uid://crqqouuu8uq86" path="res://Scenes/AdnCosas/Adn.tscn" id="1_ngeey"]
 [ext_resource type="PackedScene" uid="uid://d0gqxwn20pbi2" path="res://Scenes/AdnCosas/base_holder.tscn" id="2_jkokn"]
 [ext_resource type="PackedScene" uid="uid://dn85q4tl7ugwb" path="res://Scenes/AdnCosas/Bases/Citosina.tscn" id="4_st64n"]
 [ext_resource type="PackedScene" uid="uid://cltk82rjxcc76" path="res://Scenes/AdnCosas/Bases/Guanina.tscn" id="5_pw4gx"]
 [ext_resource type="PackedScene" uid="uid://cuxlll7dmv5sc" path="res://Scenes/AdnCosas/Bases/Timina.tscn" id="6_tmaqv"]
+[ext_resource type="Texture2D" uid="uid://dnd284sqn8b2k" path="res://Assets/PlaceholdersGuapos/cursor.png" id="7_st64n"]
+[ext_resource type="Script" uid="uid://bpa2rutunusot" path="res://Scripts/cursor.gd" id="8_pw4gx"]
 
-[node name="MutationScene" type="Node2D" unique_id=1112628153]
+[node name="MutationScene" type="Node2D" unique_id=1486565592]
+script = ExtResource("1_i2nsj")
 
 [node name="Adn" parent="." unique_id=815589405 instance=ExtResource("1_ngeey")]
 
@@ -24,3 +28,7 @@ baseScene = ExtResource("5_pw4gx")
 [node name="Holder4" parent="." unique_id=876302710 instance=ExtResource("2_jkokn")]
 position = Vector2(480, 694)
 baseScene = ExtResource("6_tmaqv")
+
+[node name="cursor" type="Sprite2D" parent="." unique_id=538416078]
+texture = ExtResource("7_st64n")
+script = ExtResource("8_pw4gx")
