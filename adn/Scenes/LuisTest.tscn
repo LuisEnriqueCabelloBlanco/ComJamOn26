@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bppuna2korqt6" path="res://Assets/Temporal.png" id="2_gpsgy"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_ydiuu"]
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="3_ytcx7"]
+[ext_resource type="Texture2D" uid="uid://unw8ep7sko8y" path="res://Assets/TileMapTemp.png" id="4_f7dw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t62tr"]
 texture = ExtResource("1_ny50u")
@@ -31,17 +32,35 @@ texture_region_size = Vector2i(256, 256)
 11:1/0 = 0
 11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 65, -63.5, 64, 64, -64, 64)
 3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 0, 128, 0, 128, 128, -128, 128)
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
 4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 0, 128, 0, 128, 128, -128, 128)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
 5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 0, 128, 0, 128, 128, -128, 128)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1cwwg"]
+texture = ExtResource("4_f7dw4")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -64, 128, -64, 128, 128, -128, 128)
 
 [sub_resource type="TileSet" id="TileSet_sydyy"]
 tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t62tr")
 sources/1 = SubResource("TileSetAtlasSource_f7dw4")
+sources/2 = SubResource("TileSetAtlasSource_1cwwg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytcx7"]
 size = Vector2(128, 126)
@@ -56,7 +75,7 @@ cameraSpeed = 100.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1887580150]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAABAAYAAQAEAAAAAAACAAYAAQAEAAAAAAADAAYAAQAEAAAAAAAEAAYAAQAEAAAAAAAFAAYAAQAEAAAAAAAGAAYAAQAEAAAAAAAHAAYAAQAEAAAAAAAIAAYAAQAFAAAAAAAAAAYAAQADAAAAAAAJAAUAAQAEAAAAAAAIAAUAAQADAAAAAAAKAAUAAQAEAAAAAAALAAUAAQAEAAAAAAAMAAUAAQAEAAAAAAANAAUAAQAFAAAAAAA=")
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAABAAYAAgACAAAAAAACAAYAAgACAAAAAAADAAYAAgACAAAAAAAEAAYAAgADAAAAAAAFAAYAAgAFAAAAAAAGAAYAAgACAAAAAAAHAAYAAgACAAAAAAAIAAYAAgACAAAAAAAAAAYAAgABAAAAAAAJAAUAAQAEAAAAAAAIAAUAAgABAAAAAAAKAAUAAgADAAAAAAALAAUAAgAEAAAAAAAMAAUAAgAEAAAAAAANAAUAAgAFAAAAAAABAAcAAgAAAAAAAAACAAcAAgAAAAAAAAADAAcAAgAAAAAAAAAEAAcAAgAAAAAAAAAFAAcAAgAAAAAAAAAGAAcAAgAAAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgAAAAAAAAAOAAUAAgAGAAAAAAA=")
 tile_set = SubResource("TileSet_sydyy")
 rendering_quadrant_size = 128
 

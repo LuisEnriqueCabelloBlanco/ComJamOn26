@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://cd0m36qdqltu3"]
 
 [ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_vj4dn"]
+[ext_resource type="Texture2D" uid="uid://bl3ejqukgvypn" path="res://Assets/boceto interfaz NO DEFINITIVO.jpg" id="2_y6x8u"]
 
 [node name="EscenaB" type="Node2D" unique_id=362514352]
+
+[node name="BocetoInterfazNoDefinitivo" type="Sprite2D" parent="." unique_id=1983535879]
+texture = ExtResource("2_y6x8u")
+centered = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=691218214]
 position = Vector2(922, 539)
