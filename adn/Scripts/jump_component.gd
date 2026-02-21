@@ -9,6 +9,10 @@ var is_jumping: bool = false
 
 func handle_jump(body:CharacterBody2D, want_to_jump:bool)->void:
 	if want_to_jump and body.is_on_floor():
-		body.velocity.y = jump_velocity
-	
+		var adjustedVelocity = Vector2(0,0)
+		var player = body as Player
+		if player.platform != null:
+			adjustedVelocity -= player.platform.velocity
+		body.velocity.y = jump_velocity + adjustedVelocity.y
+		
 	is_jumping = body.velocity.y < 0 and not body.is_on_floor()
