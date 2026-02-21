@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_8xl7b"]
 [ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="2_8786i"]
 [ext_resource type="TileSet" uid="uid://dng7l66yt0an" path="res://tileSet.tres" id="3_s1m42"]
-[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="4_vtbtr"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="4_vtbtr"]
 [ext_resource type="PackedScene" path="res://Scenes/Button.tscn" id="5_714g7"]
 [ext_resource type="PackedScene" path="res://Scenes/box.tscn" id="6_qrg8e"]
 [ext_resource type="PackedScene" path="res://Scenes/Door.tscn" id="7_66raj"]
@@ -38,7 +38,7 @@ position = Vector2(-182, 717)
 position = Vector2(889, 912)
 
 [node name="Box" parent="." unique_id=2042465066 instance=ExtResource("6_qrg8e")]
-position = Vector2(488, 725)
+position = Vector2(427, 588)
 
 [node name="Door" parent="." unique_id=527798983 instance=ExtResource("7_66raj")]
 position = Vector2(1471, 767)
@@ -46,7 +46,20 @@ position = Vector2(1471, 767)
 [node name="Door2" parent="." unique_id=215706727 instance=ExtResource("7_66raj")]
 position = Vector2(1208, 500)
 
-[node name="MovingPlatdorm" parent="." unique_id=562968531 instance=ExtResource("8_lm6n6")]
+[node name="MovingPlatdorm" parent="." unique_id=562968531 node_paths=PackedStringArray("points") instance=ExtResource("8_lm6n6")]
+position = Vector2(185, 758)
+points = [NodePath("../PlatformPoint1"), NodePath("../PlatformPoint2"), NodePath("../PlatformPoint3")]
+target = 0
+speed = 200
+
+[node name="PlatformPoint1" type="Node2D" parent="." unique_id=1723460759]
+position = Vector2(185, 758)
+
+[node name="PlatformPoint2" type="Node2D" parent="." unique_id=662142906]
+position = Vector2(533, 82)
+
+[node name="PlatformPoint3" type="Node2D" parent="." unique_id=157971548]
+position = Vector2(894, 438)
 
 [connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
 [connection signal="buttonPressed" from="Button" to="Door2" method="_on_button_button_pressed"]

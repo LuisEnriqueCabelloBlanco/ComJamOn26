@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export_subgroup("Nodes")
 @export var gravity_component:GravityComponent
@@ -8,6 +9,7 @@ extends CharacterBody2D
 @export var night_vision_component:NightVisionComponent
 @export var animaton_component:AnimationComponent
 
+var platform
 
 @export_subgroup("Night Vision Layers")
 @export var visibleLayer:Node

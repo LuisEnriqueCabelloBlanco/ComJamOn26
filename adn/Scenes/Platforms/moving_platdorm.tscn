@@ -3,11 +3,30 @@
 [ext_resource type="Texture2D" uid="uid://cgcuij02cj1x7" path="res://Assets/PlaceholdersGuapos/movingplatform.png" id="1_mhemh"]
 [ext_resource type="Script" uid="uid://76xjg3wj5wsq" path="res://Scripts/moving_platform.gd" id="2_e4ktn"]
 
-[node name="MovingPlatdorm" type="Node2D" unique_id=562968531]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4ktn"]
+size = Vector2(639, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63ddy"]
+size = Vector2(653, 25)
+
+[node name="MovingPlatdorm" type="AnimatableBody2D" unique_id=37831591]
 script = ExtResource("2_e4ktn")
-goingTo = null
+target = null
 speed = null
 
 [node name="MovingplatformSprite" type="Sprite2D" parent="." unique_id=259665446]
-position = Vector2(438, 504)
 texture = ExtResource("1_mhemh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838029540]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_e4ktn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1392250659]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1874742408]
+position = Vector2(1, -41.5)
+shape = SubResource("RectangleShape2D_63ddy")
+debug_color = Color(0.84997624, 0.36985567, 0.14209732, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
