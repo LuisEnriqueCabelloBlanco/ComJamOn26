@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lcy2t0t2iqua" path="res://Scripts/Adn/Adn.gd" id="1_3jf5d"]
 [ext_resource type="PackedScene" uid="uid://c2stsuh0u16k8" path="res://Scenes/AdnCosas/Link.tscn" id="2_babhw"]
+[ext_resource type="PackedScene" uid="uid://r0bv733xhbwl" path="res://Scenes/AdnCosas/reset_button.tscn" id="3_babhw"]
 
 [node name="Adn" type="Node2D" unique_id=815589405]
 script = ExtResource("1_3jf5d")
@@ -20,3 +21,6 @@ position = Vector2(970, 572)
 
 [node name="Link5" parent="." unique_id=1228803178 instance=ExtResource("2_babhw")]
 position = Vector2(975, 385)
+
+[node name="ResetButton" parent="." unique_id=1285341756 instance=ExtResource("3_babhw")]
+position = Vector2(1303, 184)

@@ -9,8 +9,7 @@ const basesPath = "res://Scenes/AdnCosas/Bases/"
 
 # Pone una base en este eslabón de la cadena. 
 func PutInBase(base : Base):
-	if (self.base != null):
-		self.base.queue_free()
+	DropBase()
 	base.get_parent().remove_child(base)
 	add_child(base)
 	self.base = base
@@ -21,3 +20,7 @@ func PutInBase(base : Base):
 	# llama a actualizar los estados de mutaciones en el adn
 	var adn = get_parent() as Adn
 	adn.UpdateMutations()
+
+func DropBase():
+	if (self.base != null):
+		self.base.queue_free()

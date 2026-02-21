@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://r0bv733xhbwl"]
+
+[ext_resource type="Texture2D" uid="uid://bbalk2u7ywj0b" path="res://Assets/PlaceholdersGuapos/resetButton.png" id="1_qlj8x"]
+[ext_resource type="Script" uid="uid://cp3a7vgu3j7kh" path="res://Scripts/Adn/ResetButton.gd" id="2_vv03a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkcdx"]
+
+[node name="ResetButton" type="Sprite2D" unique_id=1285341756]
+scale = Vector2(0.24257836, 0.2927083)
+texture = ExtResource("1_qlj8x")
+script = ExtResource("2_vv03a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=188370586]
+position = Vector2(14.9436245, -9.395019)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1732449170]
+scale = Vector2(24.84, 20.58)
+shape = SubResource("CircleShape2D_gkcdx")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
