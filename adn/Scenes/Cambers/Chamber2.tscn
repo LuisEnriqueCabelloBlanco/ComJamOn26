@@ -1,0 +1,26 @@
+[gd_scene format=4 uid="uid://cw1o1vswfu6d3"]
+
+[ext_resource type="TileSet" uid="uid://dng7l66yt0an" path="res://tileSet.tres" id="1_imolu"]
+[ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="2_gmm4m"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_14hbm"]
+
+[node name="Chamber2" type="Node2D" unique_id=1627054782]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=344351235]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAAAAYABgABAAMAAAABAAYABgACAAMAAAADAAYABgAGAAMAAAACAAYABgACAAMAAAA=")
+tile_set = ExtResource("1_imolu")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1832074503]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAALAAYABgACAAMAAAAMAAYABgACAAMAAAANAAYABgACAAMAAAAOAAYABgAGAAMAAAAGAAYABgABAAMAAAAHAAYABgAGAAMAAAAKAAYABgABAAMAAAA=")
+tile_set = ExtResource("1_imolu")
+
+[node name="CameraFollow" type="Camera2D" parent="." unique_id=1531124185 node_paths=PackedStringArray("followNode")]
+position = Vector2(967, 542)
+script = ExtResource("2_gmm4m")
+followNode = NodePath("../Player")
+metadata/_custom_type_script = "uid://gdcaqo533anm"
+
+[node name="Player" parent="." unique_id=1336915041 instance=ExtResource("3_14hbm")]
+position = Vector2(198, 368)
