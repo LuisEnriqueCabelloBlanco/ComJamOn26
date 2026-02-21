@@ -5,7 +5,6 @@
 [ext_resource type="TileSet" uid="uid://dng7l66yt0an" path="res://tileSet.tres" id="3_s1m42"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="4_vtbtr"]
 [ext_resource type="PackedScene" path="res://Scenes/Button.tscn" id="5_714g7"]
-[ext_resource type="PackedScene" path="res://Scenes/box.tscn" id="6_qrg8e"]
 [ext_resource type="PackedScene" path="res://Scenes/Door.tscn" id="7_66raj"]
 [ext_resource type="PackedScene" uid="uid://dic2x2fp54ymh" path="res://Scenes/Platforms/moving_platdorm.tscn" id="8_lm6n6"]
 
@@ -15,7 +14,6 @@
 position = Vector2(123, 503)
 script = ExtResource("1_8xl7b")
 followNode = NodePath("../Player")
-cameraSpeed = 150.0
 
 [node name="Parallax2D" type="Parallax2D" parent="Camera2D" unique_id=1526738488]
 autoscroll = Vector2(50, 0)
@@ -27,41 +25,34 @@ texture = ExtResource("2_8786i")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1035849669]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAAFAAcABgACAAMAAAAGAAcABgACAAMAAAAHAAcABgACAAMAAAAIAAcABgACAAMAAAAJAAcABgACAAMAAAAKAAcABgACAAMAAAALAAEAAwABAAEAAAALAAIAAwABAAEAAAALAAMAAwABAAEAAAALAAQAAwABAAEAAAD7/wYABgABAAMAAAD7/wcABgAAAAMAAAD8/wYABgACAAMAAAD8/wcABgACAAQAAAD9/wYABgACAAMAAAD9/wcABgACAAQAAAD+/wYABgACAAMAAAD+/wcABgACAAQAAAD//wYABgACAAMAAAD//wcABgACAAQAAAAAAAYABgACAAMAAAAAAAcABgACAAQAAAABAAYABgACAAMAAAABAAcABgACAAQAAAACAAYABgACAAMAAAACAAcABgACAAQAAAADAAYABgACAAMAAAADAAcABgACAAQAAAAEAAYABgAGAAMAAAAEAAcABgAGAAQAAAAEAAgABgADAAQAAAADAAgABgADAAQAAAACAAgABgADAAQAAAABAAgABgADAAQAAAAAAAgABgADAAQAAAD//wgABgADAAQAAAD+/wgABgADAAQAAAD9/wgABgADAAQAAAD8/wgABgADAAQAAAD7/wgABgAAAAMAAAAFAAgABgACAAQAAAAGAAgABgACAAQAAAAHAAgABgACAAQAAAAIAAgABgACAAQAAAAJAAgABgACAAQAAAAKAAgABgACAAQAAAALAAcABgACAAMAAAAMAAcABgACAAMAAAALAAgABgACAAQAAAAMAAgABgACAAQAAAAGAAUAAQADAAAAAAA=")
+tile_map_data = PackedByteArray("AAADACcAAAAAAAAAAAALACcAAAAAAAAAAAATACcAAAAAAAAAAAAbACcAAAAAAAAAAAAjACcAAAAAAAAAAAArACcAAAAAAAAAAAAzACcAAAAAAAAAAAA7ACcAAAAAAAAAAABDACcAAAAAAAAAAAAFAAcABgACAAMAAAAGAAcABgACAAMAAAAHAAcABgACAAMAAAAIAAcABgACAAMAAAAJAAcABgACAAMAAAAKAAcABgACAAMAAAALAAEAAwABAAEAAAALAAIAAwABAAEAAAALAAMAAwABAAEAAAALAAQAAwABAAEAAAD7/wYABgABAAMAAAD7/wcABgAAAAMAAAD8/wYABgACAAMAAAD8/wcABgACAAQAAAD9/wYABgACAAMAAAD9/wcABgACAAQAAAD+/wYABgACAAMAAAD+/wcABgACAAQAAAD//wYABgACAAMAAAD//wcABgACAAQAAAAAAAYABgACAAMAAAAAAAcABgACAAQAAAABAAYABgACAAMAAAABAAcABgACAAQAAAACAAYABgACAAMAAAACAAcABgACAAQAAAADAAYABgACAAMAAAADAAcABgACAAQAAAAEAAYABgAGAAMAAAAEAAcABgAGAAQAAAAEAAgABgADAAQAAAADAAgABgADAAQAAAACAAgABgADAAQAAAABAAgABgADAAQAAAAAAAgABgADAAQAAAD//wgABgADAAQAAAD+/wgABgADAAQAAAD9/wgABgADAAQAAAD8/wgABgADAAQAAAD7/wgABgAAAAMAAAAFAAgABgACAAQAAAAGAAgABgACAAQAAAAHAAgABgACAAQAAAAIAAgABgACAAQAAAAJAAgABgACAAQAAAAKAAgABgACAAQAAAALAAcABgACAAMAAAAMAAcABgACAAMAAAALAAgABgACAAQAAAAMAAgABgACAAQAAAACAAUAAgACAAAAAAD//wUAAgABAAAAAAD//wQAAgABAAAAAAD//wMAAgABAAAAAAAGAAQAAQADAAAAAAA=")
 tile_set = ExtResource("3_s1m42")
+occlusion_enabled = false
 rendering_quadrant_size = 128
 
 [node name="Player" parent="." unique_id=1336915041 instance=ExtResource("4_vtbtr")]
-position = Vector2(-182, 717)
+position = Vector2(133, 693)
 
 [node name="Button" parent="." unique_id=44048984 instance=ExtResource("5_714g7")]
 position = Vector2(889, 912)
 
-[node name="Box" parent="." unique_id=2042465066 instance=ExtResource("6_qrg8e")]
-position = Vector2(427, 588)
-
 [node name="Door" parent="." unique_id=527798983 instance=ExtResource("7_66raj")]
 position = Vector2(1471, 767)
 
-[node name="Door2" parent="." unique_id=215706727 instance=ExtResource("7_66raj")]
-position = Vector2(1208, 500)
-
 [node name="MovingPlatdorm" parent="." unique_id=562968531 node_paths=PackedStringArray("points") instance=ExtResource("8_lm6n6")]
-position = Vector2(185, 758)
+position = Vector2(-449, 18)
 points = [NodePath("../PlatformPoint1"), NodePath("../PlatformPoint2"), NodePath("../PlatformPoint3")]
 target = 0
 speed = 200
 
 [node name="PlatformPoint1" type="Node2D" parent="." unique_id=1723460759]
-position = Vector2(185, 758)
+position = Vector2(149, 30)
 
 [node name="PlatformPoint2" type="Node2D" parent="." unique_id=662142906]
 position = Vector2(533, 82)
 
 [node name="PlatformPoint3" type="Node2D" parent="." unique_id=157971548]
-position = Vector2(894, 438)
+position = Vector2(1006, 46)
 
 [connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
-[connection signal="buttonPressed" from="Button" to="Door2" method="_on_button_button_pressed"]
 [connection signal="buttonReleased" from="Button" to="Door" method="_on_button_button_released"]
-[connection signal="buttonReleased" from="Button" to="Door2" method="_on_button_button_released"]
