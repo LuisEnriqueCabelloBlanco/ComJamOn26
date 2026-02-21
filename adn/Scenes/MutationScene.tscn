@@ -8,9 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://cuxlll7dmv5sc" path="res://Scenes/AdnCosas/Bases/Timina.tscn" id="6_tmaqv"]
 [ext_resource type="Texture2D" uid="uid://dnd284sqn8b2k" path="res://Assets/PlaceholdersGuapos/cursor.png" id="7_st64n"]
 [ext_resource type="Script" uid="uid://bpa2rutunusot" path="res://Scripts/cursor.gd" id="8_pw4gx"]
+[ext_resource type="Texture2D" uid="uid://bl3ejqukgvypn" path="res://Assets/boceto interfaz NO DEFINITIVO.jpg" id="9_tmaqv"]
 
 [node name="MutationScene" type="Node2D" unique_id=1486565592]
 script = ExtResource("1_i2nsj")
+
+[node name="BocetoInterfazNoDefinitivo" type="Sprite2D" parent="." unique_id=25088709]
+texture = ExtResource("9_tmaqv")
+centered = false
 
 [node name="Adn" parent="." unique_id=815589405 instance=ExtResource("1_ngeey")]
 
