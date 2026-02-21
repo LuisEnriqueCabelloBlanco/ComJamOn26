@@ -37,3 +37,7 @@ baseScene = ExtResource("6_tmaqv")
 [node name="cursor" type="Sprite2D" parent="." unique_id=538416078]
 texture = ExtResource("7_st64n")
 script = ExtResource("8_pw4gx")
+
+[connection signal="patern1" from="." to="." method="signalToGM1"]
+[connection signal="patern2" from="." to="." method="signalToGM2"]
+[connection signal="patern3" from="." to="." method="signalToGM3"]
