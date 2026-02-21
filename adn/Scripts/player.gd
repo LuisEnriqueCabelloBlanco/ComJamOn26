@@ -34,10 +34,11 @@ func _ready() -> void:
 	night_vision_component.loadNVCLayers(visibleLayer, invisibleLayer)
 	
 func powerUp1(active:bool):
-	night_vision_component.toggleNightVision(active)
+	jump_component.set_aditional_jump(active)
 	print(active)
 
 func powerUp2(active:bool):
+	night_vision_component.toggleNightVision(active)
 	print(active)
 	
 func powerUp3(active:bool):

@@ -9,8 +9,6 @@ extends Node
 @export var aditional_jump = false
 var is_jumping: bool = false
 
-func _ready() -> void:
-	GameManager.pattern1.connect(set_aditional_jump)
 
 func handle_jump(body:CharacterBody2D, want_to_jump:bool)->void:
 	if want_to_jump and body.is_on_floor():

@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bixtqgh55xk6v" path="res://Scripts/night_vision_component.gd" id="1_nn08x"]
 [ext_resource type="Script" uid="uid://r5j6ia0oq16v" path="res://Scripts/player.gd" id="1_xhfnw"]
-[ext_resource type="Script" path="res://Scripts/gravity_component.gd" id="2_kpjcp"]
+[ext_resource type="Script" uid="uid://ce2u6iny1wxtg" path="res://Scripts/gravity_component.gd" id="2_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bryhdj2uyx728" path="res://Assets/Spritesheets/Running spritesheet(2).png" id="2_yoq75"]
 [ext_resource type="Texture2D" uid="uid://14qv2nakludh" path="res://Assets/Spritesheets/Jumping Down spritesheet.png" id="3_yoq75"]
 [ext_resource type="Script" uid="uid://dsrw4x0alyvde" path="res://Scripts/input_component.gd" id="4_e80uo"]
 [ext_resource type="Texture2D" uid="uid://bak1pk3ncdg88" path="res://Assets/Spritesheets/Jumping spritesheet(2).png" id="4_yoq75"]
-[ext_resource type="Script" path="res://Scripts/movement_component.gd" id="5_cxr5p"]
+[ext_resource type="Script" uid="uid://bvs13gkx2i14h" path="res://Scripts/movement_component.gd" id="5_cxr5p"]
 [ext_resource type="Script" uid="uid://dj6uu5nj5hwjc" path="res://Scripts/jump_component.gd" id="6_tdg3f"]
 [ext_resource type="PackedScene" uid="uid://4631y3o4xguo" path="res://Scenes/Components/AnimatonComponent.tscn" id="10_yoq75"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rwas"]
-radius = 49.0
-height = 162.0
+radius = 35.0
+height = 128.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksbbd"]
 atlas = ExtResource("2_yoq75")
@@ -226,11 +226,11 @@ night_vision_component = NodePath("NightVisionComponent")
 animaton_component = NodePath("AnimatonComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=155062871]
-position = Vector2(0, -7)
+position = Vector2(0, 26)
 shape = SubResource("CapsuleShape2D_0rwas")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=784973696]
-scale = Vector2(0.14999999, 0.15)
+scale = Vector2(0.182, 0.18199998)
 sprite_frames = SubResource("SpriteFrames_qidb7")
 animation = &"jumpDown"
 autoplay = "default"
@@ -238,6 +238,7 @@ frame_progress = 0.82987547
 
 [node name="GravityComponent" type="Node" parent="." unique_id=122216828]
 script = ExtResource("2_kpjcp")
+gravity = 1500.0
 
 [node name="InputComponent" type="Node" parent="." unique_id=598979871]
 script = ExtResource("4_e80uo")
@@ -248,7 +249,7 @@ speed = 250.0
 
 [node name="JumpComponent" type="Node" parent="." unique_id=167222886]
 script = ExtResource("6_tdg3f")
-jump_velocity = -600.0
+jump_velocity = -1000.0
 jump_multiplier = 1.35
 
 [node name="NightVisionComponent" type="Node" parent="." unique_id=1767828531]
