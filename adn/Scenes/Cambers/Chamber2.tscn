@@ -18,26 +18,43 @@ script = ExtResource("2_gmm4m")
 followNode = NodePath("../Player")
 metadata/_custom_type_script = "uid://gdcaqo533anm"
 
-[node name="Parallax2D" type="Parallax2D" parent="CameraFollow" unique_id=895618192]
-repeat_size = Vector2(1920, 0)
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=206051871]
+scroll_scale = Vector2(2, 2)
+scroll_offset = Vector2(-3, 485)
+repeat_size = Vector2(3840, 0)
 repeat_times = 2
 
-[node name="Sprite2D4" type="Sprite2D" parent="CameraFollow/Parallax2D" unique_id=1279551428]
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D" unique_id=2139729346]
 position = Vector2(-891, -508)
 texture = ExtResource("2_x68od")
 centered = false
 
-[node name="Sprite2D" type="Sprite2D" parent="CameraFollow/Parallax2D" unique_id=659540257]
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1741614386]
+scroll_scale = Vector2(1.9, 1.9)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1560779191]
 position = Vector2(-891, -508)
 texture = ExtResource("3_5hiie")
 centered = false
 
-[node name="Sprite2D3" type="Sprite2D" parent="CameraFollow/Parallax2D" unique_id=2086133748]
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1424713431]
+scroll_scale = Vector2(1.8, 1.8)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D3" unique_id=1419789985]
 position = Vector2(-891, -508)
 texture = ExtResource("4_p5twe")
 centered = false
 
-[node name="Sprite2D2" type="Sprite2D" parent="CameraFollow/Parallax2D" unique_id=2015718162]
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1625927819]
+scroll_scale = Vector2(1.7, 1.7)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=1926135337]
 position = Vector2(-891, -508)
 texture = ExtResource("5_8cg6m")
 centered = false
