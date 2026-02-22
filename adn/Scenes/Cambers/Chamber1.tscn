@@ -8,6 +8,47 @@
 [ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Prefabs/Button.tscn" id="7_seoxu"]
 [ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Prefabs/Door.tscn" id="8_s33b7"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="8_seoxu"]
+[ext_resource type="Texture2D" uid="uid://b2vxoi3luo4sy" path="res://Assets/UI/conotrles/sprite TECLA CORTA.png" id="9_s33b7"]
+[ext_resource type="SpriteFrames" uid="uid://dqawi1cshcue4" path="res://Assets/Frames/spacebar.tres" id="10_0hoqi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hoqi"]
+atlas = ExtResource("9_s33b7")
+region = Rect2(0, 0, 128, 114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e4wd"]
+atlas = ExtResource("9_s33b7")
+region = Rect2(128, 0, 128, 114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83qto"]
+atlas = ExtResource("9_s33b7")
+region = Rect2(256, 0, 128, 114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqw6h"]
+atlas = ExtResource("9_s33b7")
+region = Rect2(384, 0, 128, 114)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ful43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hoqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e4wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83qto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqw6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8e4wd"]
+font_size = 41
 
 [node name="Chamber1" type="Node2D" unique_id=320689683]
 editor_description = "Presentacion de la caja"
@@ -43,6 +84,56 @@ position = Vector2(911, 915)
 
 [node name="Door" parent="." unique_id=527798983 instance=ExtResource("8_s33b7")]
 position = Vector2(1241, 375)
+
+[node name="Controles" type="Node2D" parent="." unique_id=1404492956]
+
+[node name="A" type="AnimatedSprite2D" parent="Controles" unique_id=1694671989]
+position = Vector2(-606, 314)
+sprite_frames = SubResource("SpriteFrames_ful43")
+autoplay = "default"
+frame_progress = 0.5966201
+
+[node name="Label" type="Label" parent="Controles/A" unique_id=398277472]
+offset_left = 11.0
+offset_top = -41.0
+offset_right = 59.0
+offset_bottom = 160.0
+rotation = 0.7853982
+text = "A
+"
+label_settings = SubResource("LabelSettings_8e4wd")
+
+[node name="D" type="AnimatedSprite2D" parent="Controles" unique_id=1926202560]
+position = Vector2(-353, 317)
+sprite_frames = SubResource("SpriteFrames_ful43")
+autoplay = "default"
+frame_progress = 0.9818738
+
+[node name="Label" type="Label" parent="Controles/D" unique_id=1814385482]
+offset_left = 10.0
+offset_top = -41.0
+offset_right = 58.0
+offset_bottom = 160.0
+rotation = 0.7853982
+text = "D
+"
+label_settings = SubResource("LabelSettings_8e4wd")
+
+[node name="Spacebar" type="AnimatedSprite2D" parent="Controles" unique_id=2085699120]
+position = Vector2(-80, 312)
+sprite_frames = ExtResource("10_0hoqi")
+autoplay = "default"
+frame_progress = 0.49540225
+
+[node name="Label" type="Label" parent="Controles/Spacebar" unique_id=1010966331]
+offset_left = -27.0
+offset_top = -68.0
+offset_right = 87.0
+offset_bottom = 133.0
+rotation = 0.6806784
+text = "Jump!
+"
+label_settings = SubResource("LabelSettings_8e4wd")
 
 [connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
 [connection signal="buttonReleased" from="Button" to="Door" method="_on_button_button_released"]

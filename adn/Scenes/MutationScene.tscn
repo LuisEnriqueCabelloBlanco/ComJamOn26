@@ -15,10 +15,10 @@
 [ext_resource type="Script" uid="uid://cpue4ukcg0nbm" path="res://Scripts/Adn/pulltab.gd" id="11_dfqqr"]
 [ext_resource type="Texture2D" uid="uid://cwp84664g4lfy" path="res://Assets/UI/carpet/HojaVision.png" id="11_tjxgn"]
 [ext_resource type="Texture2D" uid="uid://cai4ri7sa8rs4" path="res://Assets/UI/carpet/Carpeta.png" id="12_dkk6k"]
-[ext_resource type="Script" uid="uid://dp4ydqkcvu2rg" path="res://Scenes/av_pag.gd" id="12_kblxu"]
+[ext_resource type="Script" path="res://Scenes/av_pag.gd" id="12_kblxu"]
 [ext_resource type="Texture2D" uid="uid://d2488x430k226" path="res://Assets/UI/carpet/Flecha.png" id="13_tnjeu"]
 [ext_resource type="Texture2D" uid="uid://dwb5ls7cpc4bt" path="res://Assets/UI/ICONO POWER UP CABRA.png" id="18_tjxgn"]
-[ext_resource type="Script" uid="uid://chc745qnpwskf" path="res://Scenes/iconos_powerups.gd" id="18_w4mh1"]
+[ext_resource type="Script" path="res://Scenes/iconos_powerups.gd" id="18_w4mh1"]
 [ext_resource type="Texture2D" uid="uid://dtjm74t3smymc" path="res://Assets/UI/ICONO POWER UP OJOS.png" id="19_w4mh1"]
 [ext_resource type="Texture2D" uid="uid://q0ewtotcx6ah" path="res://Assets/UI/ICONO POWER UP SALTO.png" id="20_pivj6"]
 
@@ -32,6 +32,7 @@ size = Vector2(170.49997, 137)
 size = Vector2(82.23535, 80.30289)
 
 [sub_resource type="LabelSettings" id="LabelSettings_w4mh1"]
+font_size = 40
 font_color = Color(0.57254905, 1, 1, 1)
 
 [node name="MutationScene" type="Node2D" unique_id=1486565592]
@@ -67,14 +68,17 @@ iconoSalto = NodePath("IconoPowerUpSalto")
 iconoVision = NodePath("IconoPowerUpOjos")
 
 [node name="IconoPowerUpCabra" type="Sprite2D" parent="IconosPowerups" unique_id=1125324986]
+visible = false
 position = Vector2(50, 35)
 texture = ExtResource("18_tjxgn")
 
 [node name="IconoPowerUpOjos" type="Sprite2D" parent="IconosPowerups" unique_id=910217284]
+visible = false
 position = Vector2(263, 37)
 texture = ExtResource("19_w4mh1")
 
 [node name="IconoPowerUpSalto" type="Sprite2D" parent="IconosPowerups" unique_id=1907951266]
+visible = false
 position = Vector2(477, 38)
 texture = ExtResource("20_pivj6")
 
@@ -147,6 +151,7 @@ offset_left = 46.0
 offset_top = 35.0
 offset_right = 356.0
 offset_bottom = 67.0
+theme_override_font_sizes/font_size = 592
 text = "Pulsa R para volver a empezar"
 label_settings = SubResource("LabelSettings_w4mh1")
 

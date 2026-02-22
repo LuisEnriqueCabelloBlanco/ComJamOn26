@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dqawi1cshcue4"]
+
+[ext_resource type="Texture2D" uid="uid://baji8o1ujxdaf" path="res://Assets/UI/conotrles/sprite TECLA LARGA.png" id="1_x8pvm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkclp"]
+atlas = ExtResource("1_x8pvm")
+region = Rect2(0, 0, 236, 197)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wepy"]
+atlas = ExtResource("1_x8pvm")
+region = Rect2(236, 0, 236, 197)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ugyi"]
+atlas = ExtResource("1_x8pvm")
+region = Rect2(472, 0, 236, 197)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyypd"]
+atlas = ExtResource("1_x8pvm")
+region = Rect2(708, 0, 236, 197)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkclp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wepy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ugyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyypd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

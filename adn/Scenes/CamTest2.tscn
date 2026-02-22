@@ -17,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0lk4n")
-levels = Array[PackedScene]([ExtResource("4_c7rru"), ExtResource("1_g1kca"), ExtResource("3_2y502"), ExtResource("5_fjide"), ExtResource("6_fjide"), ExtResource("6_7yn6f")])
+levels = Array[PackedScene]([ExtResource("1_g1kca"), ExtResource("3_2y502"), ExtResource("4_c7rru"), ExtResource("5_fjide"), ExtResource("6_fjide"), ExtResource("6_7yn6f")])
 topViewportNode = NodePath("MarginContainer/VBoxContainer/SubViewportContainer/SubViewport")
 botViewportNode = NodePath("MarginContainer/VBoxContainer/SubViewportContainer2/SubViewport")
 
