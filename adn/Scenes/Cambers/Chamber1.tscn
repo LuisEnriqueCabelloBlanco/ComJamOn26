@@ -21,7 +21,8 @@ script = ExtResource("1_k2ok7")
 followNode = NodePath("../Player")
 
 [node name="Parallax2D" type="Parallax2D" parent="Camera2D" unique_id=1526738488]
-repeat_size = Vector2(1920, 0)
+scroll_scale = Vector2(2, 2)
+repeat_size = Vector2(3840, 0)
 repeat_times = 2
 
 [node name="Sprite2D4" type="Sprite2D" parent="Camera2D/Parallax2D" unique_id=1220835537]
@@ -29,17 +30,29 @@ position = Vector2(-891, -508)
 texture = ExtResource("2_0hoqi")
 centered = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Parallax2D" unique_id=820519150]
+[node name="Parallax2D2" type="Parallax2D" parent="Camera2D" unique_id=732057389]
+scroll_scale = Vector2(1.9, 1.9)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Parallax2D2" unique_id=820519150]
 position = Vector2(-891, -508)
 texture = ExtResource("2_s33b7")
 centered = false
 
-[node name="Sprite2D3" type="Sprite2D" parent="Camera2D/Parallax2D" unique_id=713666729]
+[node name="Parallax2D3" type="Parallax2D" parent="Camera2D" unique_id=1665004430]
+scroll_scale = Vector2(1.8, 1.8)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Camera2D/Parallax2D3" unique_id=713666729]
 position = Vector2(-891, -508)
 texture = ExtResource("4_8e4wd")
 centered = false
 
-[node name="Sprite2D2" type="Sprite2D" parent="Camera2D/Parallax2D" unique_id=400598954]
+[node name="Parallax2D4" type="Parallax2D" parent="Camera2D" unique_id=1521059328]
+scroll_scale = Vector2(1.7, 1.7)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Camera2D/Parallax2D4" unique_id=400598954]
 position = Vector2(-891, -508)
 texture = ExtResource("3_0hoqi")
 centered = false
@@ -55,12 +68,6 @@ position = Vector2(-182, 717)
 collision_layer = 2
 collision_mask = 3
 visibleLayer = NodePath("../TileMapLayer")
-
-[node name="Button" parent="." unique_id=44048984]
-position = Vector2(1005, 912)
-
-[node name="Door" parent="." unique_id=527798983]
-position = Vector2(1240, 389)
 
 [node name="ChamberGoal" parent="." unique_id=952817552 instance=ExtResource("8_seoxu")]
 position = Vector2(1473, 503)
