@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dj6uu5nj5hwjc" path="res://Scripts/jump_component.gd" id="6_tdg3f"]
 [ext_resource type="PackedScene" uid="uid://4631y3o4xguo" path="res://Scenes/Components/AnimatonComponent.tscn" id="10_yoq75"]
 [ext_resource type="Script" uid="uid://b0grppxn5bjqt" path="res://Scripts/push_component.gd" id="11_ksbbd"]
+[ext_resource type="Script" uid="uid://c3hn3uleebhic" path="res://Scripts/strength_component.gd" id="12_glx4g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rwas"]
 radius = 35.0
@@ -216,7 +217,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1336915041 node_paths=PackedStringArray("gravity_component", "movement_componet", "input_component", "jump_component", "push_component", "night_vision_component", "animaton_component")]
+[node name="Player" type="CharacterBody2D" unique_id=1336915041 node_paths=PackedStringArray("gravity_component", "movement_componet", "input_component", "jump_component", "push_component", "night_vision_component", "animaton_component", "strength_component")]
 collision_layer = 3
 script = ExtResource("1_xhfnw")
 gravity_component = NodePath("GravityComponent")
@@ -226,6 +227,7 @@ jump_component = NodePath("JumpComponent")
 push_component = NodePath("PushComponent")
 night_vision_component = NodePath("NightVisionComponent")
 animaton_component = NodePath("AnimatonComponent")
+strength_component = NodePath("StrengthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=155062871]
 position = Vector2(0, 26)
@@ -263,3 +265,7 @@ sprite = NodePath("../Sprite2D")
 
 [node name="PushComponent" type="Node" parent="." unique_id=169712391]
 script = ExtResource("11_ksbbd")
+
+[node name="StrengthComponent" type="Node" parent="." unique_id=1211766875]
+script = ExtResource("12_glx4g")
+metadata/_custom_type_script = "uid://c3hn3uleebhic"

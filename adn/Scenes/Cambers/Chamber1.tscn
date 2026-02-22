@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="5_0g47n"]
 [ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Door.tscn" id="7_clbgy"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="8_seoxu"]
-[ext_resource type="PackedScene" uid="uid://cw1o1vswfu6d3" path="res://Scenes/Cambers/Chamber2.tscn" id="9_s33b7"]
+[ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="13_ful43"]
 [ext_resource type="Script" uid="uid://bm42r2oxq06ym" path="res://Scripts/wooden_box.gd" id="13_xqw6h"]
 
 [node name="Chamber1" type="Node2D" unique_id=320689683]
@@ -55,6 +55,7 @@ rendering_quadrant_size = 128
 
 [node name="Player" parent="." unique_id=1336915041 node_paths=PackedStringArray("visibleLayer") instance=ExtResource("3_0g47n")]
 position = Vector2(-182, 717)
+collision_layer = 2
 collision_mask = 3
 visibleLayer = NodePath("../TileMapLayer")
 
@@ -66,12 +67,14 @@ position = Vector2(1240, 389)
 
 [node name="ChamberGoal" parent="." unique_id=952817552 instance=ExtResource("8_seoxu")]
 position = Vector2(1473, 503)
-nextScene = ExtResource("9_s33b7")
 
 [node name="Wooden_Box" parent="." unique_id=2042465066 instance=ExtResource("5_0g47n")]
 position = Vector2(477, 737)
 collision_layer = 3
 script = ExtResource("13_xqw6h")
+
+[node name="Metal_Box" parent="." unique_id=1490678404 instance=ExtResource("13_ful43")]
+position = Vector2(150, 740)
 
 [connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
 [connection signal="buttonReleased" from="Button" to="Door" method="_on_button_button_released"]

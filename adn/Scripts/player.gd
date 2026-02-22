@@ -9,6 +9,7 @@ class_name Player
 @export var push_component:PushComponent
 @export var night_vision_component:NightVisionComponent
 @export var animaton_component:AnimationComponent
+@export var strength_component:StrengthComponent
 
 var platform
 
@@ -24,7 +25,11 @@ func _physics_process(delta: float) -> void:
 	animaton_component.handle_jump_animation(jump_component.is_jumping,gravity_component.is_falling)
 	if not jump_component.is_jumping and not gravity_component.is_falling:
 		animaton_component.handle_move_animaton(input_component.input_horizontal)
-	push_component.handle_pushing(self)
+	
+	if strength_component.is_active():
+		push_component.handle_metal_pushing(self)
+	else:
+		push_component.handle_wood_pushing(self)
 	move_and_slide()
 
 func _ready() -> void:
@@ -32,7 +37,10 @@ func _ready() -> void:
 	GameManager.pattern2.connect(powerUp2)
 	GameManager.pattern3.connect(powerUp3)
 	
+	GameManager.pattern3.emit(1) # fuerza activada por default para testing
+	
 	night_vision_component.loadNVCLayers(visibleLayer, invisibleLayer)
+	
 	
 func powerUp1(active:bool):
 	jump_component.set_aditional_jump(active)
@@ -43,4 +51,5 @@ func powerUp2(active:bool):
 	print("Mutacion2",active)
 	
 func powerUp3(active:bool):
+	strength_component.toggleStrength(active)
 	print("Mutacion3",active)
