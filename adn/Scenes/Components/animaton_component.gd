@@ -7,6 +7,10 @@ extends Node
 @export var backHorn:AnimatedSprite2D
 @export var eye:AnimatedSprite2D
 
+func _ready() -> void:
+	GameManager.pattern2.connect(activateNv)
+	GameManager.pattern3.connect(activateStr)
+
 func handle_horizontal_flip(move_dir: float)->void:
 	if move_dir==0:
 		return
@@ -40,3 +44,11 @@ func handle_jump_animation(is_jumping:bool, is_falling:bool)->void:
 		backHorn.play("jumpDown")
 		eye.play("jumpDown")
 	pass
+	
+func activateNv(activate: bool)->void:
+	eye.visible = activate
+	pass
+
+func activateStr(activate:bool)->void:
+	backHorn.visible = activate
+	frontHorn.visible = activate

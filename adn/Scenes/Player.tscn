@@ -867,6 +867,7 @@ position = Vector2(0, 26)
 shape = SubResource("CapsuleShape2D_0rwas")
 
 [node name="BackHorn" type="AnimatedSprite2D" parent="." unique_id=2081415153]
+visible = false
 scale = Vector2(0.182, 0.182)
 sprite_frames = SubResource("SpriteFrames_75iyv")
 animation = &"idle"
@@ -912,12 +913,14 @@ script = ExtResource("12_glx4g")
 metadata/_custom_type_script = "uid://c3hn3uleebhic"
 
 [node name="Eye" type="AnimatedSprite2D" parent="." unique_id=1741047662]
+visible = false
 scale = Vector2(0.182, 0.182)
 sprite_frames = SubResource("SpriteFrames_1iu4k")
-animation = &"jumpUp"
+animation = &"jumpDown"
 autoplay = "idle"
 
 [node name="FrontHorn" type="AnimatedSprite2D" parent="." unique_id=1996213616]
+visible = false
 scale = Vector2(0.182, 0.182)
 sprite_frames = SubResource("SpriteFrames_6hr71")
 animation = &"idle"
