@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxFabrica.tscn" id="2_vspvp"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_14hbm"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="4_ylfud"]
+[ext_resource type="PackedScene" uid="uid://chtliicqcl60m" path="res://Scenes/Prefabs/death_trigger.tscn" id="7_d18n5"]
 [ext_resource type="PackedScene" uid="uid://dwdbmcgiomeqi" path="res://Scenes/Prefabs/note_unlock.tscn" id="9_5hiie"]
 
 [node name="Chamber2" type="Node2D" unique_id=1627054782]
@@ -38,3 +39,6 @@ position = Vector2(326, 379)
 
 [node name="NoteUnlock" parent="." unique_id=585051422 instance=ExtResource("9_5hiie")]
 position = Vector2(695, 824)
+
+[node name="DeathTrigger" parent="." unique_id=1888922689 instance=ExtResource("7_d18n5")]
+position = Vector2(-477, 1197)

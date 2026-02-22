@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://chtliicqcl60m"]
+
+[ext_resource type="Script" uid="uid://cdcxrjlj1ctl0" path="res://Scenes/Cambers/death_trigger.gd" id="1_tnpvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vspvp"]
+size = Vector2(10604.75, 1212.25)
+
+[node name="DeathTrigger" type="Area2D" unique_id=1888922689]
+script = ExtResource("1_tnpvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278559829]
+position = Vector2(3284.625, 460.875)
+shape = SubResource("RectangleShape2D_vspvp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

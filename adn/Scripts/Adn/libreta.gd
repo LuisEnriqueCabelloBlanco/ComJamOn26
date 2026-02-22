@@ -35,6 +35,9 @@ func siguiente():
 	notaSprite.texture = notas[current] 
 
 func previo():
+	if !abierto:
+		abrir()
+		return
 	if current > 0:
 		current -= 1
 	notaSprite.texture = notas[current] 
