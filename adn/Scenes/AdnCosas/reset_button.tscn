@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://r0bv733xhbwl"]
 
-[ext_resource type="Texture2D" uid="uid://bbalk2u7ywj0b" path="res://Assets/PlaceholdersGuapos/resetButton.png" id="1_qlj8x"]
+[ext_resource type="Texture2D" uid="uid://c1kc61tb2oim6" path="res://Assets/UI/restart button.png" id="1_qlj8x"]
+[ext_resource type="Texture2D" uid="uid://bkx0q06do5iq0" path="res://Assets/UI/INTERFAZ etilo de tecla 1 TAMAÑO AJUSTADO.png" id="1_vv03a"]
 [ext_resource type="Script" uid="uid://cp3a7vgu3j7kh" path="res://Scripts/Adn/ResetButton.gd" id="2_vv03a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gkcdx"]
+radius = 6.1090665
 
 [node name="ResetButton" type="Sprite2D" unique_id=1285341756]
-scale = Vector2(0.24257836, 0.2927083)
-texture = ExtResource("1_qlj8x")
+texture = ExtResource("1_vv03a")
 script = ExtResource("2_vv03a")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=188370586]
@@ -16,5 +17,10 @@ position = Vector2(14.9436245, -9.395019)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1732449170]
 scale = Vector2(24.84, 20.58)
 shape = SubResource("CircleShape2D_gkcdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=444922637]
+position = Vector2(31.999998, -0.99999994)
+scale = Vector2(0.07466666, 0.07466666)
+texture = ExtResource("1_qlj8x")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
