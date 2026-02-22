@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ADN"
-run/main_scene="uid://bqg2or04gtard"
+run/main_scene="uid://jy6lnyhh8jiu"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://c3smn8vpfsxiu"
 window/size/viewport_width=1920

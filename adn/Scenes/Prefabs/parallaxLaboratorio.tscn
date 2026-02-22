@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bc37r8jdr48xb"]
+
+[ext_resource type="Texture2D" uid="uid://1ix82fxn6tn7" path="res://Assets/Fondos/FondoLaboratorioBack.png" id="1_uwgmv"]
+[ext_resource type="Texture2D" uid="uid://dtsq15mq1lkms" path="res://Assets/Fondos/FondoLaboratorioMain.png" id="2_hqv1p"]
+
+[node name="ParallaxLaboratorio" type="Node2D" unique_id=456213926]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1331527360]
+scroll_scale = Vector2(2, 2)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+repeat_times = 2
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D" unique_id=1596743137]
+position = Vector2(-891, -508)
+texture = ExtResource("1_uwgmv")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=271597951]
+scroll_scale = Vector2(1.7, 1.7)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=138154454]
+position = Vector2(-891, -508)
+texture = ExtResource("2_hqv1p")
+centered = false
