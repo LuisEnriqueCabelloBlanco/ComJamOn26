@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://brem18g4mkt7k" path="res://Scripts/mainMenuScript.gd" id="1_xim88"]
 [ext_resource type="PackedScene" uid="uid://chjgqw2luivif" path="res://Scenes/CamTest2.tscn" id="2_koqhg"]
 [ext_resource type="Texture2D" uid="uid://1ix82fxn6tn7" path="res://Assets/Fondos/FondoLaboratorioBack.png" id="3_cmrfp"]
+[ext_resource type="PackedScene" uid="uid://dwgbifxoqw4i4" path="res://Scenes/creditsScene.tscn" id="3_if7li"]
 [ext_resource type="Texture2D" uid="uid://dh2y8vf16pgis" path="res://Assets/Vitrina.png" id="4_8um5k"]
 [ext_resource type="Texture2D" uid="uid://dtsq15mq1lkms" path="res://Assets/Fondos/FondoLaboratorioMain.png" id="4_loo7a"]
 [ext_resource type="Texture2D" uid="uid://ct8tsbpdlsyk6" path="res://Assets/VitrinaRota.png" id="5_xim88"]
@@ -143,6 +144,7 @@ animations = [{
 [node name="MainMenu" type="Node2D" unique_id=1600150567 node_paths=PackedStringArray("glass")]
 script = ExtResource("1_xim88")
 firstScene = ExtResource("2_koqhg")
+CreditsScene = ExtResource("3_if7li")
 glass = NodePath("Vitrina")
 
 [node name="FondoLaboratorioBack" type="Sprite2D" parent="." unique_id=706738149]

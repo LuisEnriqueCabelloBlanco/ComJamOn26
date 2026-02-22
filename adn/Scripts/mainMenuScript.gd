@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var firstScene:PackedScene
+@export var CreditsScene:PackedScene
 @export var glass:Node2D
 
 # Called when the node enters the scene tree for the first time.
@@ -31,6 +32,7 @@ func changeScene():
 
 
 func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_packed(CreditsScene)
 	pass # Replace with function body.
 
 
