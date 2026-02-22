@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://creln4f7eum57"
-path="res://.godot/imported/TuberiasFront.png-0ab72d06054781fe3e0c7a6054c17a14.ctex"
+uid="uid://nm2jhvoc5omr"
+path="res://.godot/imported/Caja rompiéndose Spritesheet.png-e6bd209dfc92f202772f55df58b3b1a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Cambers/TuberiasFront.png"
-dest_files=["res://.godot/imported/TuberiasFront.png-0ab72d06054781fe3e0c7a6054c17a14.ctex"]
+source_file="res://Assets/Spritesheets/Caja rompiéndose Spritesheet.png"
+dest_files=["res://.godot/imported/Caja rompiéndose Spritesheet.png-e6bd209dfc92f202772f55df58b3b1a1.ctex"]
 
 [params]
 

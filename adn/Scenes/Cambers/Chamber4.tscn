@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dic2x2fp54ymh" path="res://Scenes/Platforms/moving_platdorm.tscn" id="6_mvjq3"]
 [ext_resource type="PackedScene" path="res://Scenes/Prefabs/Button.tscn" id="7_rcpoo"]
 [ext_resource type="PackedScene" path="res://Scenes/Prefabs/Door.tscn" id="9_8q0ht"]
+[ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Prefabs/Button.tscn" id="7_rcpoo"]
+[ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Prefabs/Door.tscn" id="9_8q0ht"]
+[ext_resource type="PackedScene" uid="uid://dwdbmcgiomeqi" path="res://Scenes/Prefabs/note_unlock.tscn" id="11_yujyb"]
 
 [node name="Chamber4" type="Node2D" unique_id=1092231631]
 
@@ -61,6 +64,10 @@ position = Vector2(1438, 172)
 
 [node name="Door" parent="." unique_id=527798983 instance=ExtResource("9_8q0ht")]
 position = Vector2(4047, 130)
+
+[node name="NoteUnlock" parent="." unique_id=585051422 instance=ExtResource("11_yujyb")]
+position = Vector2(3906, 845)
+note = 2
 
 [connection signal="buttonPressed" from="Button" to="MovingPlatdorm" method="_on_button_button_pressed"]
 [connection signal="buttonReleased" from="Button" to="MovingPlatdorm" method="_on_button_button_released"]

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bkg7h3o0gfmfj" path="res://Scenes/Cambers/Chamber4.tscn" id="5_fjide"]
 [ext_resource type="PackedScene" uid="uid://bipmmx6jxu2er" path="res://Scenes/Cambers/Chamber5.tscn" id="6_7yn6f"]
 [ext_resource type="PackedScene" path="res://Scenes/Cambers/Chamber6.tscn" id="6_fjide"]
+[ext_resource type="PackedScene" uid="uid://p7s5oj8ioews" path="res://Scenes/Cambers/Chamber6.tscn" id="6_fjide"]
 
 [node name="CamTest2" type="Control" unique_id=1002739137 node_paths=PackedStringArray("topViewportNode", "botViewportNode")]
 layout_mode = 3

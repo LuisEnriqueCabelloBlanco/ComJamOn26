@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cqfjo5lwq56u7"]
 
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_8xl7b"]
-[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="2_8786i"]
+[ext_resource type="PackedScene" uid="uid://bc37r8jdr48xb" path="res://Scenes/Prefabs/parallaxLaboratorio.tscn" id="2_2y2hd"]
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="3_s1m42"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="4_vtbtr"]
 [ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Prefabs/Button.tscn" id="5_714g7"]
@@ -15,13 +15,7 @@ position = Vector2(123, 503)
 script = ExtResource("1_8xl7b")
 followNode = NodePath("../Player")
 
-[node name="Parallax2D" type="Parallax2D" parent="Camera2D" unique_id=1526738488]
-autoscroll = Vector2(50, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Parallax2D" unique_id=820519150]
-position = Vector2(-332.096, 1)
-scale = Vector2(9.7485, 8.4375)
-texture = ExtResource("2_8786i")
+[node name="ParallaxLaboratorio" parent="." unique_id=456213926 instance=ExtResource("2_2y2hd")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1035849669]
 scale = Vector2(0.5, 0.5)

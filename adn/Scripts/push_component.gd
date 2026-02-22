@@ -17,4 +17,5 @@ func handle_metal_pushing(body: CharacterBody2D)->void:
 			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 		elif c.get_collider() is WoodenBox:
 			# destruir caja, añadir delay?
-			c.get_collider().free()
+			var box = c.get_collider() as WoodenBox
+			box.destroy()

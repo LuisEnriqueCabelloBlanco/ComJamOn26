@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="5_li2i7"]
 [ext_resource type="PackedScene" path="res://Scenes/Prefabs/Door.tscn" id="8_wduv5"]
 [ext_resource type="PackedScene" path="res://Scenes/Prefabs/Button.tscn" id="9_m2bet"]
+[ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Prefabs/Door.tscn" id="8_wduv5"]
+[ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Prefabs/Button.tscn" id="9_m2bet"]
+[ext_resource type="PackedScene" uid="uid://dwdbmcgiomeqi" path="res://Scenes/Prefabs/note_unlock.tscn" id="10_bjea5"]
+[ext_resource type="PackedScene" uid="uid://chtliicqcl60m" path="res://Scenes/Prefabs/death_trigger.tscn" id="11_tq2fq"]
 
 [node name="Chamber3" type="Node2D" unique_id=623192410]
 
@@ -46,6 +50,13 @@ position = Vector2(3519, 396)
 
 [node name="Button" parent="." unique_id=44048984 instance=ExtResource("9_m2bet")]
 position = Vector2(3055, 530)
+
+[node name="NoteUnlock" parent="." unique_id=585051422 instance=ExtResource("10_bjea5")]
+position = Vector2(857, 601)
+note = 1
+
+[node name="DeathTrigger" parent="." unique_id=1888922689 instance=ExtResource("11_tq2fq")]
+position = Vector2(-1201, 1279)
 
 [connection signal="buttonPressed" from="Button" to="Door" method="_on_button_button_pressed"]
 [connection signal="buttonReleased" from="Button" to="Button" method="_on_button_released"]

@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://dwdbmcgiomeqi"]
 
 [ext_resource type="Script" uid="uid://dk8qtndvolwfp" path="res://Scripts/note_unlock.gd" id="1_10n42"]
+[ext_resource type="Texture2D" uid="uid://c4rm8ek6tcotb" path="res://Assets/AssetHoja.png" id="2_pbw1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x68od"]
-size = Vector2(103, 66)
+size = Vector2(115, 112)
 
 [node name="NoteUnlock" type="Area2D" unique_id=585051422]
 script = ExtResource("1_10n42")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=626452620]
-position = Vector2(-2, 20)
+position = Vector2(-1.5, -3)
 shape = SubResource("RectangleShape2D_x68od")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=574801190]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_pbw1u")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

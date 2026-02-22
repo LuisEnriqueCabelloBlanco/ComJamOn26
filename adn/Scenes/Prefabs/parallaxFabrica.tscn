@@ -8,7 +8,7 @@
 [node name="ParallaxPrefab" type="Node2D" unique_id=679643591]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1056919474]
-scroll_scale = Vector2(2, 2)
+scroll_scale = Vector2(0.5, 2)
 scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 repeat_times = 2
@@ -19,7 +19,7 @@ texture = ExtResource("1_4jem2")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1155356157]
-scroll_scale = Vector2(1.9, 1.9)
+scroll_scale = Vector2(0.6, 0.6)
 scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 
@@ -29,7 +29,7 @@ texture = ExtResource("2_p2joa")
 centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=796951890]
-scroll_scale = Vector2(1.8, 1.8)
+scroll_scale = Vector2(0.7, 0.7)
 scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 
@@ -39,7 +39,7 @@ texture = ExtResource("3_gitti")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="." unique_id=192125205]
-scroll_scale = Vector2(1.7, 1.7)
+scroll_scale = Vector2(0.8, 0.5)
 scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 

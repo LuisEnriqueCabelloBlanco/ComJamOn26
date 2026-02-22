@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caeqtwxixcu1s"
-path="res://.godot/imported/goalFag.png-e53468eee4aa05007216fe03fa99ecd0.ctex"
+uid="uid://tc57dy58kj8f"
+path="res://.godot/imported/SPRITE LEVANTANDOSE .png-45d206714b27638092c952e2e3a6071b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PlaceholdersGuapos/goalFag.png"
-dest_files=["res://.godot/imported/goalFag.png-e53468eee4aa05007216fe03fa99ecd0.ctex"]
+source_file="res://Assets/Spritesheets/SPRITE LEVANTANDOSE .png"
+dest_files=["res://.godot/imported/SPRITE LEVANTANDOSE .png-45d206714b27638092c952e2e3a6071b.ctex"]
 
 [params]
 

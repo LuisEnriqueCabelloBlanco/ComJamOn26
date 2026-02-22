@@ -1,7 +1,36 @@
 [gd_scene format=3 uid="uid://c2vhfe60n5n0y"]
 
 [ext_resource type="Script" uid="uid://bm42r2oxq06ym" path="res://Scripts/wooden_box.gd" id="1_4xkef"]
-[ext_resource type="Texture2D" uid="uid://c8w6c1v02w3eu" path="res://Assets/CAJA LIGERA.png" id="1_mir0w"]
+[ext_resource type="Texture2D" uid="uid://nm2jhvoc5omr" path="res://Assets/Spritesheets/Caja rompiéndose Spritesheet.png" id="2_4xkef"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rree7"]
+atlas = ExtResource("2_4xkef")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrx2h"]
+atlas = ExtResource("2_4xkef")
+region = Rect2(3000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4rfu"]
+atlas = ExtResource("2_4xkef")
+region = Rect2(6000, 0, 3000, 3000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_parjj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rree7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrx2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4rfu")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytcx7"]
 size = Vector2(128, 126)
@@ -14,10 +43,10 @@ gravity_scale = 0.75
 lock_rotation = true
 script = ExtResource("1_4xkef")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=109672803]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1725819982]
 position = Vector2(0, -4.499999)
 scale = Vector2(0.042, 0.044999998)
-texture = ExtResource("1_mir0w")
+sprite_frames = SubResource("SpriteFrames_parjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466470564]
 shape = SubResource("RectangleShape2D_ytcx7")
