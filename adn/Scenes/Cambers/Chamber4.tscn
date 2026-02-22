@@ -44,8 +44,9 @@ position = Vector2(720, 932)
 [node name="Button2" parent="." unique_id=1334705872 instance=ExtResource("7_rcpoo")]
 position = Vector2(3185, 907)
 
-[node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_mvjq3")]
+[node name="Player" parent="." unique_id=1336915041 node_paths=PackedStringArray("visibleLayer") instance=ExtResource("2_mvjq3")]
 position = Vector2(143, 769)
+visibleLayer = NodePath("../TileMapLayer")
 
 [node name="WayPoints" type="Node2D" parent="." unique_id=2020660048]
 
