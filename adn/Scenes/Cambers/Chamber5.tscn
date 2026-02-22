@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bipmmx6jxu2er"]
+[gd_scene format=4 uid="uid://bipmmx6jxu2er"]
 
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_rylgt"]
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="2_430dg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="3_430dg"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="4_cvloe"]
 [ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="5_t2eyp"]
+[ext_resource type="PackedScene" uid="uid://dic2x2fp54ymh" path="res://Scenes/Platforms/moving_platdorm.tscn" id="7_430dg"]
 
 [node name="Chamber5" type="Node2D" unique_id=365480128]
 
@@ -15,18 +16,43 @@ script = ExtResource("1_rylgt")
 followNode = NodePath("../Player")
 metadata/_custom_type_script = "uid://gdcaqo533anm"
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1080348441]
+[node name="TileMapBehind" type="TileMapLayer" parent="." unique_id=1080348441]
 scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAACAAUABgAEAAAAAAADAAUABgAEAAAAAAAEAAUABgAEAAAAAAABAAUABgADAAAAAAAFAAUABgAFAAAAAAAAAAUABgACAAAAAAAGAAUABgACAAAAAAAHAAUABgACAAAAAAD//wUABgACAAAAAAD//wYABgACAAEAAAAAAAYABgACAAEAAAABAAYABgACAAEAAAACAAYABgACAAEAAAADAAYABgACAAEAAAAEAAYABgACAAEAAAAFAAYABgACAAEAAAAGAAYABgACAAEAAAAHAAYABgACAAEAAAAAAAcABgADAAEAAAD//wcABgADAAEAAAABAAcABgADAAEAAAACAAcABgADAAEAAAADAAcABgADAAEAAAAEAAcABgADAAEAAAAFAAcABgADAAEAAAAGAAcABgADAAEAAAAHAAcABgADAAEAAAAHAAgABgADAAEAAAAGAAgABgADAAEAAAAFAAgABgADAAEAAAAEAAgABgADAAEAAAADAAgABgADAAEAAAACAAgABgADAAEAAAABAAgABgADAAEAAAAAAAgABgADAAEAAAD//wgABgADAAEAAAD+/wUABgACAAAAAAD+/wYABgACAAEAAAD+/wcABgADAAEAAAD+/wgABgADAAEAAAD9/wUABgAHAAIAAAD9/wQABgAHAAEAAAD9/wMABgAHAAEAAAD9/wIABgAHAAEAAAD9/wEABgAHAAEAAAD9/wYABgADAAEAAAD9/wcABgADAAEAAAD9/wgABgADAAEAAAD8/wIABgADAAEAAAD8/wMABgADAAEAAAD8/wQABgADAAEAAAD8/wUABgADAAEAAAD8/wYABgADAAEAAAD8/wcABgADAAEAAAD8/wgABgADAAEAAAD7/wgABgADAAEAAAD7/wcABgADAAEAAAD7/wYABgADAAEAAAD7/wUABgADAAEAAAD7/wQABgADAAEAAAD7/wMABgADAAEAAAD7/wIABgADAAEAAAD6/wIABgADAAEAAAD5/wIABgADAAEAAAD5/wMABgADAAEAAAD5/wQABgADAAEAAAD5/wUABgADAAEAAAD5/wYABgADAAEAAAD6/wYABgADAAEAAAD6/wcABgADAAEAAAD6/wgABgADAAEAAAD5/wgABgADAAEAAAD5/wcABgADAAEAAAD6/wUABgADAAEAAAD6/wQABgADAAEAAAD6/wMABgADAAEAAAD4/wIABgADAAEAAAD3/wIABgAAAAEAAAD3/wMABgAAAAEAAAD3/wQABgAAAAEAAAD4/wQABgADAAEAAAD4/wUABgADAAEAAAD4/wYABgADAAEAAAD4/wcABgADAAEAAAD3/wcABgADAAEAAAD3/wgABgADAAEAAAD4/wgABgADAAEAAAD3/wYABgADAAEAAAD3/wUABgAAAAEAAAD4/wMABgADAAEAAAAIAAUABgACAAAAAAAJAAUABgAGAAAAAAAIAAYABgACAAEAAAAJAAYABgAHAAAAAAAJAAcABgAHAAEAAAAIAAcABgADAAEAAAAJAAgABgAHAAEAAAAIAAgABgADAAEAAAD8/wEABgADAAEAAAD7/wEABgADAAEAAAD6/wEABgADAAEAAAD5/wEABgADAAEAAAD4/wEABgADAAEAAAD3/wEABgAAAAEAAAD8////BgACAAAAAAD7////BgACAAAAAAD6////BgACAAAAAAD5////BgACAAAAAAD4////BgACAAAAAAD3////BgABAAAAAAD8/wAABgACAAEAAAD7/wAABgACAAEAAAD6/wAABgACAAEAAAD5/wAABgACAAEAAAD4/wAABgACAAEAAAD3/wAABgAAAAAAAAD9/wAABgAHAAAAAAD9////BgAGAAAAAAA=")
+tile_set = ExtResource("2_430dg")
+
+[node name="TileMapMiddle" type="TileMapLayer" parent="." unique_id=1629743345]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAACAAUABQAEAAAAAAADAAUABQAEAAAAAAAEAAUABQAEAAAAAAABAAUABQAEAAAAAAAFAAUABQAEAAAAAAA=")
 tile_set = ExtResource("2_430dg")
 
 [node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_iyuqh")]
-position = Vector2(379, 576)
+position = Vector2(425, 495)
+
+[node name="TileMapFront" type="TileMapLayer" parent="." unique_id=1999098958]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAACAAUABAAEAAAAAAADAAUABAAEAAAAAAAEAAUABAAEAAAAAAABAAUABAAEAAAAAAAFAAUABAAEAAAAAAA=")
+tile_set = ExtResource("2_430dg")
 
 [node name="ChamberGoal" parent="." unique_id=926119434 instance=ExtResource("3_430dg")]
-position = Vector2(757, 596)
+position = Vector2(3666, 413)
 
 [node name="Wooden_Box" parent="." unique_id=2042465066 instance=ExtResource("4_cvloe")]
-position = Vector2(1032, 638)
+position = Vector2(1007, 306)
 
 [node name="Metal_Box" parent="." unique_id=1762953106 instance=ExtResource("5_t2eyp")]
-position = Vector2(1242, 641)
+texture_filter = 6
+position = Vector2(941, 523)
+
+[node name="MovingPlatdorm" parent="." unique_id=37831591 node_paths=PackedStringArray("points") instance=ExtResource("7_430dg")]
+position = Vector2(1720, 560)
+points = [NodePath("../Waypoints/Node2D"), NodePath("../Waypoints/Node2D2")]
+
+[node name="Waypoints" type="Node2D" parent="." unique_id=1092591699]
+
+[node name="Node2D" type="Node2D" parent="Waypoints" unique_id=847128634]
+position = Vector2(1672, 766)
+
+[node name="Node2D2" type="Node2D" parent="Waypoints" unique_id=79084828]
+position = Vector2(1720, 755.96)
+rotation = -0.6257657

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://jevy621hadoc"]
+
+[ext_resource type="Texture2D" uid="uid://bs5x66gil8ftn" path="res://Assets/Fondos/fondo_cueva/CuevaDetras.png" id="1_cvicm"]
+[ext_resource type="Texture2D" uid="uid://def14we2xq5h5" path="res://Assets/Fondos/fondo_cueva/CuevaMedio.png" id="2_eofkq"]
+[ext_resource type="Texture2D" uid="uid://mvjp2xbd7xt4" path="res://Assets/Fondos/fondo_cueva/CuevaFrente.png" id="3_7mkk3"]
+
+[node name="ParallaxPrefabCueva" type="Node2D" unique_id=876121233]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=470001943]
+
+[node name="CuevaDetras" type="Sprite2D" parent="Parallax2D" unique_id=2142466531]
+position = Vector2(-1920, -540)
+texture = ExtResource("1_cvicm")
+
+[node name="CuevaDetras2" type="Sprite2D" parent="Parallax2D" unique_id=239504465]
+position = Vector2(1920, -540)
+texture = ExtResource("1_cvicm")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1985891286]
+
+[node name="CuevaMedio" type="Sprite2D" parent="Parallax2D2" unique_id=789733129]
+position = Vector2(-1920, -540)
+texture = ExtResource("2_eofkq")
+
+[node name="CuevaMedio2" type="Sprite2D" parent="Parallax2D2" unique_id=1025437867]
+position = Vector2(1920, -540)
+texture = ExtResource("2_eofkq")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1956000450]
+
+[node name="CuevaFrente" type="Sprite2D" parent="Parallax2D3" unique_id=1857706640]
+position = Vector2(-1920, -540)
+texture = ExtResource("3_7mkk3")
+
+[node name="CuevaFrente2" type="Sprite2D" parent="Parallax2D3" unique_id=1736939546]
+position = Vector2(1920, -544)
+texture = ExtResource("3_7mkk3")
