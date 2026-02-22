@@ -1,0 +1,78 @@
+[gd_scene format=4 uid="uid://p7s5oj8ioews"]
+
+[ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_hjce3"]
+[ext_resource type="Texture2D" uid="uid://qr5cgh1en6s3" path="res://Assets/Fondos/FondoTotal.png" id="2_ugbnl"]
+[ext_resource type="Texture2D" uid="uid://b0v784kv5w22" path="res://Assets/Fondos/BarrilesBack.png" id="3_iwrqb"]
+[ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="3_wrs3b"]
+[ext_resource type="Texture2D" uid="uid://dcfr236n0kaw7" path="res://Assets/Fondos/BarrilesMedio.png" id="4_psa61"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="4_ugbnl"]
+[ext_resource type="Texture2D" uid="uid://c4y55vuoo0awr" path="res://Assets/Fondos/BarrilesFront.png" id="5_h8xls"]
+[ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="5_iwrqb"]
+
+[node name="Chamber2" type="Node2D" unique_id=1627054782]
+
+[node name="CameraFollow" type="Camera2D" parent="." unique_id=1531124185 node_paths=PackedStringArray("followNode")]
+position = Vector2(269, 555)
+script = ExtResource("1_hjce3")
+followNode = NodePath("../Player")
+metadata/_custom_type_script = "uid://gdcaqo533anm"
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=206051871]
+scroll_scale = Vector2(2, 2)
+scroll_offset = Vector2(-3, 485)
+repeat_size = Vector2(3840, 0)
+repeat_times = 2
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D" unique_id=2139729346]
+position = Vector2(-891, -508)
+texture = ExtResource("2_ugbnl")
+centered = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1741614386]
+scroll_scale = Vector2(1.9, 1.9)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1560779191]
+position = Vector2(-891, -508)
+texture = ExtResource("3_iwrqb")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1424713431]
+scroll_scale = Vector2(1.8, 1.8)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D3" unique_id=1419789985]
+position = Vector2(-891, -508)
+texture = ExtResource("4_psa61")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1625927819]
+scroll_scale = Vector2(1.7, 1.7)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=1926135337]
+position = Vector2(-891, -508)
+texture = ExtResource("5_h8xls")
+centered = false
+
+[node name="VisibleLayer" type="TileMapLayer" parent="." unique_id=344351235]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAD//wUABgAAAAQAAAD//wQABgAAAAQAAAD//wMABgAAAAQAAAD//wIABgAAAAQAAAD//wEABgAAAAQAAAD//wAABgAAAAQAAAD//wYABgAAAAQAAAD//wcABgAAAAQAAAD//wgABgAAAAQAAAAAAAcABgACAAMAAAAAAAgABgACAAQAAAABAAcABgACAAMAAAABAAgABgACAAQAAAACAAcABgADAAMAAAACAAgABgACAAQAAAADAAcABgAEAAMAAAADAAgABgACAAQAAAAEAAcABgAFAAMAAAAEAAgABgACAAQAAAAFAAcABgAGAAMAAAAFAAgABgACAAQAAAAcAAYABgAAAAQAAAAcAAcABgAAAAUAAAAcAAgABgADAAQAAAAdAAUABgADAAQAAAAdAAYABgADAAQAAAAdAAcABgADAAQAAAAdAAgABgADAAQAAAAeAAgABgAHAAQAAAAeAAcABgAHAAQAAAAeAAYABgADAAQAAAAeAAUABgAHAAQAAAAeAAQABgAHAAQAAAAeAAMABgAHAAQAAAAeAAIABgAHAAQAAAAeAAEABgAHAAQAAAAeAAAABgAHAAQAAAAcAAUABgAAAAQAAAAcAAMABgABAAMAAAAdAAMABgACAAMAAAAdAAQABgACAAQAAAAbAAcABgABAAMAAAAbAAgABgAAAAQAAAAcAAQABgAAAAMAAAANAAQABgABAAMAAAAUAAQABgAGAAMAAAAOAAQABgACAAMAAAAPAAQABgADAAMAAAAQAAQABgAEAAMAAAARAAQABgAEAAMAAAASAAQABgAEAAMAAAATAAQABgAFAAMAAAAOAAUABgACAAQAAAAPAAUABgACAAQAAAAQAAUABgACAAQAAAARAAUABgACAAQAAAASAAUABgACAAQAAAATAAUABgACAAQAAAATAAgABgADAAQAAAATAAcABgADAAQAAAATAAYABgADAAQAAAASAAYABgADAAQAAAARAAYABgADAAQAAAAQAAYABgADAAQAAAAPAAYABgADAAQAAAAOAAYABgADAAQAAAAOAAcABgADAAQAAAAOAAgABgADAAQAAAAPAAgABgADAAQAAAAQAAgABgADAAQAAAARAAgABgADAAQAAAASAAgABgADAAQAAAASAAcABgADAAQAAAARAAcABgADAAQAAAAQAAcABgADAAQAAAAPAAcABgADAAQAAAANAAUABgAAAAMAAAAUAAUABgAHAAMAAAAUAAYABgAHAAQAAAAUAAcABgAHAAQAAAAUAAgABgAHAAQAAAANAAYABgAAAAQAAAANAAcABgAAAAQAAAANAAgABgAAAAQAAAA=")
+tile_set = ExtResource("3_wrs3b")
+
+[node name="InvisibleLayer" type="TileMapLayer" parent="." unique_id=1832074503]
+visible = false
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAYAAMABgACAAMAAAAZAAMABgACAAMAAAAaAAMABgAGAAMAAAAZAAQABgACAAQAAAAYAAQABgACAAQAAAAaAAQABgAHAAMAAAAaAAUABgAHAAQAAAAaAAYABgAHAAQAAAAaAAcABgAHAAQAAAAaAAgABgAHAAQAAAAZAAUABgADAAQAAAAZAAYABgADAAQAAAAZAAcABgADAAQAAAAZAAgABgADAAQAAAAYAAUABgADAAQAAAAYAAYABgADAAQAAAAYAAcABgADAAQAAAAYAAgABgADAAQAAAAHAAYABgABAAMAAAAKAAYABgACAAMAAAAIAAYABgACAAMAAAAJAAYABgACAAMAAAAKAAcABgACAAQAAAAHAAcABgAAAAMAAAAHAAgABgAAAAQAAAAKAAgABgADAAQAAAAJAAcABgACAAQAAAAIAAcABgACAAQAAAAIAAgABgADAAQAAAAJAAgABgADAAQAAAAXAAUABgAAAAQAAAAXAAYABgAAAAQAAAAXAAcABgAAAAQAAAAXAAgABgAAAAQAAAAXAAQABgAAAAMAAAAXAAMABgABAAMAAAALAAYABgAGAAMAAAALAAcABgAHAAMAAAALAAgABgAHAAQAAAA=")
+tile_set = ExtResource("3_wrs3b")
+
+[node name="Player" parent="." unique_id=1336915041 node_paths=PackedStringArray("visibleLayer", "invisibleLayer") instance=ExtResource("4_ugbnl")]
+position = Vector2(269, 826)
+visibleLayer = NodePath("../VisibleLayer")
+invisibleLayer = NodePath("../InvisibleLayer")
+
+[node name="ChamberGoal" parent="." unique_id=926119434 instance=ExtResource("5_iwrqb")]
+position = Vector2(3714, 275)
