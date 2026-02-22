@@ -15,16 +15,12 @@ func _process(delta: float) -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	print("Pulsado")
-	var timer = Timer.new()
-	timer.connect("timeout", changeScene)
-	timer.connect("timeout", timer.queue_free)
-	timer.wait_time = 1
-	get_tree().root.add_child(timer)	
-	$Vitrina.visible=false
+	$VitrinaRota.visible = true
 	$AnimatedSprite2D.visible = false
-	$VitrinaRota.visible=true
-	timer.start()
+	$Vitrina.visible = false
+	$Levantarse.visible = true
+	$Levantarse.connect("animation_finished",changeScene)
+	$Levantarse.play("default")
 	pass # Replace with function body.
 
 func changeScene():

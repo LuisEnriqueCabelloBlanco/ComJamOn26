@@ -136,7 +136,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_leunp")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 8.0
 }]
@@ -239,6 +239,7 @@ mouse_filter = 2
 color = Color(0.84705883, 0.65882355, 0.4627451, 0.52156866)
 
 [node name="Levantarse" type="AnimatedSprite2D" parent="." unique_id=926518601]
+visible = false
 position = Vector2(942, 759)
 sprite_frames = SubResource("SpriteFrames_h1v62")
 frame_progress = 0.103973255
