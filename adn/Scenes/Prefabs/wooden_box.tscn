@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c2vhfe60n5n0y"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p61v8"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="Texture2D" uid="uid://c8w6c1v02w3eu" path="res://Assets/CAJA LIGERA.png" id="1_mir0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytcx7"]
 size = Vector2(128, 126)
@@ -12,8 +11,8 @@ mass = 0.5
 lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=109672803]
-modulate = Color(0, 1, 0, 1)
-texture = SubResource("CompressedTexture2D_p61v8")
+scale = Vector2(0.042, 0.042)
+texture = ExtResource("1_mir0w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466470564]
 shape = SubResource("RectangleShape2D_ytcx7")

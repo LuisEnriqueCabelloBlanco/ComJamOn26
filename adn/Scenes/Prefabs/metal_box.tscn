@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bc5m8xmhbsouo"]
 
 [ext_resource type="Script" uid="uid://bksuh2dgvlnbr" path="res://Scripts/metal_box.gd" id="1_8intr"]
-[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_8r0ui"]
+[ext_resource type="Texture2D" uid="uid://cl1s6q3boymsy" path="res://Assets/CAJA PESADA.png" id="2_8intr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytcx7"]
 size = Vector2(128, 126)
@@ -13,8 +13,8 @@ lock_rotation = true
 script = ExtResource("1_8intr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=109672803]
-modulate = Color(0.8784314, 0.13333334, 0, 1)
-texture = ExtResource("1_8r0ui")
+scale = Vector2(0.042, 0.041999996)
+texture = ExtResource("2_8intr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466470564]
 shape = SubResource("RectangleShape2D_ytcx7")
