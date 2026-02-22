@@ -24,3 +24,7 @@ func restart_level():
 func next_level():
 	currentScene += 1
 	load_target_scene(currentScene)
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("reiniciar"):
+		load_target_scene(currentScene)
