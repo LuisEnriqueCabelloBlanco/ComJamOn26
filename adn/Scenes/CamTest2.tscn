@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dacv2itub0ib0" path="res://Scenes/Cambers/Chamber4.tscn" id="5_fjide"]
 [ext_resource type="PackedScene" uid="uid://bipmmx6jxu2er" path="res://Scenes/Cambers/Chamber5.tscn" id="6_7yn6f"]
 [ext_resource type="PackedScene" uid="uid://p7s5oj8ioews" path="res://Scenes/Cambers/Chamber6.tscn" id="6_fjide"]
+[ext_resource type="PackedScene" uid="uid://jy6lnyhh8jiu" path="res://Scenes/MainMenu.tscn" id="8_7yn6f"]
 
 [node name="CamTest2" type="Control" unique_id=1002739137 node_paths=PackedStringArray("topViewportNode", "botViewportNode")]
 layout_mode = 3
@@ -20,6 +21,7 @@ script = ExtResource("1_0lk4n")
 levels = Array[PackedScene]([ExtResource("1_g1kca"), ExtResource("3_2y502"), ExtResource("4_c7rru"), ExtResource("5_fjide"), ExtResource("6_fjide"), ExtResource("6_7yn6f")])
 topViewportNode = NodePath("MarginContainer/VBoxContainer/SubViewportContainer/SubViewport")
 botViewportNode = NodePath("MarginContainer/VBoxContainer/SubViewportContainer2/SubViewport")
+mainMenu = ExtResource("8_7yn6f")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2054012040]
 layout_mode = 0
