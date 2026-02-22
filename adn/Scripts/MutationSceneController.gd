@@ -16,3 +16,7 @@ func signalToGM2(b: bool):
 ## Lanza la señal 3 al game manager
 func signalToGM3(b: bool):
 	GameManager.pattern3.emit(b)
+
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.

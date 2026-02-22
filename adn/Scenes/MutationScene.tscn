@@ -9,6 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://cuxlll7dmv5sc" path="res://Scenes/AdnCosas/Bases/Timina.tscn" id="6_tmaqv"]
 [ext_resource type="Script" uid="uid://bpa2rutunusot" path="res://Scripts/cursor.gd" id="8_pw4gx"]
 [ext_resource type="Texture2D" uid="uid://bhw6nw5pf3ovr" path="res://Assets/CURSOR(1).png" id="8_tmaqv"]
+[ext_resource type="Texture2D" uid="uid://mlml47t8j0om" path="res://Assets/PlaceholdersGuapos/pulltab.png" id="10_2imwv"]
+[ext_resource type="Script" uid="uid://dory4ooyxlfxt" path="res://Scripts/Adn/libreta.gd" id="11_17xr8"]
+[ext_resource type="Script" uid="uid://cpue4ukcg0nbm" path="res://Scripts/Adn/pulltab.gd" id="11_dfqqr"]
+[ext_resource type="Texture2D" uid="uid://dpkmc4tbpmool" path="res://Assets/PlaceholdersGuapos/nota1.png" id="12_dfqqr"]
+[ext_resource type="Texture2D" uid="uid://bhtixesuvulhx" path="res://Assets/PlaceholdersGuapos/pulltabreverse.png" id="12_n3pqg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkcdx"]
+size = Vector2(64.68921, 104.519714)
 
 [node name="MutationScene" type="Node2D" unique_id=1486565592]
 script = ExtResource("1_i2nsj")
@@ -34,6 +42,28 @@ baseScene = ExtResource("5_pw4gx")
 position = Vector2(531, 685)
 baseScene = ExtResource("6_tmaqv")
 
+[node name="Pulltab" type="Sprite2D" parent="." unique_id=512745327 node_paths=PackedStringArray("libreta")]
+position = Vector2(1875, 564.9999)
+scale = Vector2(1.77, 1.77)
+texture = ExtResource("10_2imwv")
+script = ExtResource("11_dfqqr")
+libreta = NodePath("../Libreta")
+tabs = Array[Texture]([ExtResource("10_2imwv"), ExtResource("12_n3pqg")])
+
+[node name="Area2D" type="Area2D" parent="Pulltab" unique_id=774889195]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pulltab/Area2D" unique_id=186007768]
+position = Vector2(1.1300049, -0.8473511)
+shape = SubResource("RectangleShape2D_gkcdx")
+
+[node name="Libreta" type="Sprite2D" parent="." unique_id=504756847]
+position = Vector2(2553, 530)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_dfqqr")
+script = ExtResource("11_17xr8")
+notas = Array[Texture]([ExtResource("12_dfqqr")])
+tweenTime = 0.23
+
 [node name="cursor" type="Sprite2D" parent="." unique_id=538416078]
 texture = ExtResource("8_tmaqv")
 script = ExtResource("8_pw4gx")
@@ -41,3 +71,4 @@ script = ExtResource("8_pw4gx")
 [connection signal="patern1" from="." to="." method="signalToGM1"]
 [connection signal="patern2" from="." to="." method="signalToGM2"]
 [connection signal="patern3" from="." to="." method="signalToGM3"]
+[connection signal="input_event" from="Pulltab/Area2D" to="Pulltab" method="_on_area_2d_input_event"]

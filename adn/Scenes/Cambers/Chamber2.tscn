@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="4_ylfud"]
 [ext_resource type="Texture2D" uid="uid://c4y55vuoo0awr" path="res://Assets/Fondos/BarrilesFront.png" id="5_8cg6m"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x68od"]
+size = Vector2(103, 66)
+
 [node name="Chamber2" type="Node2D" unique_id=1627054782]
 
 [node name="CameraFollow" type="Camera2D" parent="." unique_id=1531124185 node_paths=PackedStringArray("followNode")]
@@ -59,3 +62,10 @@ invisibleLayer = NodePath("../InvisibleLayer")
 
 [node name="ChamberGoal" parent="." unique_id=926119434 instance=ExtResource("4_ylfud")]
 position = Vector2(326, 379)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1572940175]
+position = Vector2(695, 824)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=119148740]
+position = Vector2(-2, 20)
+shape = SubResource("RectangleShape2D_x68od")
