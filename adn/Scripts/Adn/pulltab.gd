@@ -1,7 +1,7 @@
-extends Sprite2D
+extends Node2D
 
 var libreta : Libreta
-@export var tabs : Array[Texture]
+@export var tab : Sprite2D
 
 func _ready() -> void:
 	libreta = get_parent() as Libreta
@@ -12,8 +12,14 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		if mouseEvent.button_index == MouseButton.MOUSE_BUTTON_LEFT:
 			if mouseEvent.pressed:
 				if libreta.abierto:
-					libreta.cerrar()
-					texture = tabs[0]
+					close()
 				else:
-					libreta.abrir()
-					texture = tabs[1]
+					open()
+
+func open():
+	libreta.abrir()
+	tab.visible = true
+
+func close():
+	libreta.cerrar()
+	tab.visible = false

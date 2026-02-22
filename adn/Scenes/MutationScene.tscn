@@ -10,23 +10,22 @@
 [ext_resource type="Script" uid="uid://bpa2rutunusot" path="res://Scripts/cursor.gd" id="8_pw4gx"]
 [ext_resource type="Texture2D" uid="uid://bhw6nw5pf3ovr" path="res://Assets/CURSOR(1).png" id="8_tmaqv"]
 [ext_resource type="Texture2D" uid="uid://b4uuhdxt720e7" path="res://Assets/UI/carpet/HojaSalto.png" id="9_dkk6k"]
-[ext_resource type="Texture2D" uid="uid://mlml47t8j0om" path="res://Assets/PlaceholdersGuapos/pulltab.png" id="10_2imwv"]
 [ext_resource type="Texture2D" uid="uid://dptjwiw5jw07x" path="res://Assets/UI/carpet/HojaFuerza.png" id="10_heqyp"]
 [ext_resource type="Script" uid="uid://dory4ooyxlfxt" path="res://Scripts/Adn/libreta.gd" id="11_17xr8"]
 [ext_resource type="Script" uid="uid://cpue4ukcg0nbm" path="res://Scripts/Adn/pulltab.gd" id="11_dfqqr"]
 [ext_resource type="Texture2D" uid="uid://cwp84664g4lfy" path="res://Assets/UI/carpet/HojaVision.png" id="11_tjxgn"]
 [ext_resource type="Texture2D" uid="uid://cai4ri7sa8rs4" path="res://Assets/UI/carpet/Carpeta.png" id="12_dkk6k"]
 [ext_resource type="Script" uid="uid://dp4ydqkcvu2rg" path="res://Scenes/av_pag.gd" id="12_kblxu"]
-[ext_resource type="Texture2D" uid="uid://bhtixesuvulhx" path="res://Assets/PlaceholdersGuapos/pulltabreverse.png" id="12_n3pqg"]
+[ext_resource type="Texture2D" uid="uid://d2488x430k226" path="res://Assets/UI/carpet/Flecha.png" id="13_tnjeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlqi"]
-size = Vector2(39.333374, 39.333324)
+size = Vector2(168.00009, 133.00002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kblxu"]
-size = Vector2(44.00006, 44.666664)
+size = Vector2(170.49997, 137)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkcdx"]
-size = Vector2(64.68921, 104.519714)
+size = Vector2(82.23535, 80.30289)
 
 [node name="MutationScene" type="Node2D" unique_id=1486565592]
 script = ExtResource("1_i2nsj")
@@ -64,42 +63,53 @@ scale = Vector2(0.63, 0.63)
 texture = ExtResource("12_dkk6k")
 
 [node name="AvPag" type="Sprite2D" parent="Libreta" unique_id=1227476617]
-position = Vector2(604.25, -258.40002)
-texture = ExtResource("12_n3pqg")
+position = Vector2(570.33, -263.72)
+rotation = 3.1415927
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_tnjeu")
 script = ExtResource("12_kblxu")
 
 [node name="Area2D" type="Area2D" parent="Libreta/AvPag" unique_id=1285108887]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Libreta/AvPag/Area2D" unique_id=1153153849]
-position = Vector2(2.333496, -3)
+position = Vector2(-1, -4.5000305)
 shape = SubResource("RectangleShape2D_rmlqi")
 
 [node name="RePag" type="Sprite2D" parent="Libreta" unique_id=603958122]
-position = Vector2(-522.7501, -277.40002)
-texture = ExtResource("10_2imwv")
+position = Vector2(-546.75, -263.72)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_tnjeu")
 script = ExtResource("12_kblxu")
 advance = false
 
 [node name="Area2D" type="Area2D" parent="Libreta/RePag" unique_id=1477468971]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Libreta/RePag/Area2D" unique_id=1550765042]
+position = Vector2(-17.869995, -4.8500366)
 shape = SubResource("RectangleShape2D_kblxu")
 
-[node name="Nota" type="Sprite2D" parent="Libreta" unique_id=573967891]
-position = Vector2(8.000057, 18.666685)
-scale = Vector2(0.542, 0.546)
-
-[node name="Pulltab" type="Sprite2D" parent="Libreta" unique_id=512745327]
-position = Vector2(-589.95, 38.099937)
-scale = Vector2(1.1800001, 7.39)
+[node name="Pulltab" type="Node2D" parent="Libreta" unique_id=956802714 node_paths=PackedStringArray("tab")]
+position = Vector2(-521.84, 49.02)
 script = ExtResource("11_dfqqr")
-tabs = Array[Texture]([ExtResource("10_2imwv"), ExtResource("12_n3pqg")])
+tab = NodePath("Sprite2D")
 
 [node name="Area2D" type="Area2D" parent="Libreta/Pulltab" unique_id=774889195]
+scale = Vector2(2.09, 7.34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Libreta/Pulltab/Area2D" unique_id=186007768]
-position = Vector2(1.1300049, -0.8473511)
+position = Vector2(-7.6430664, 11.261063)
+scale = Vector2(0.9999999, 1)
 shape = SubResource("RectangleShape2D_gkcdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Libreta/Pulltab" unique_id=1707974457]
+position = Vector2(-40, -1.42)
+rotation = 3.1415927
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("13_tnjeu")
+
+[node name="Nota" type="Sprite2D" parent="Libreta" unique_id=573967891]
+position = Vector2(-9.75, 44.599976)
+scale = Vector2(0.5, 0.5)
 
 [node name="cursor" type="Sprite2D" parent="." unique_id=538416078]
 texture = ExtResource("8_tmaqv")

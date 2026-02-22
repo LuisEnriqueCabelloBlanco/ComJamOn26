@@ -11,8 +11,8 @@ func _input(event: InputEvent) -> void:
 			HideMouseAndShowNewCursor(false)
 		else:
 			HideMouseAndShowNewCursor(true)
-		position.x = clamp(position.x, viewport.position.x, viewport.end.x)
-		position.y = clamp(position.y, viewport.position.y, viewport.end.y)
+		position.x = clamp(position.x, viewport.position.x, viewport.end.x + texture.get_size().x)
+		position.y = clamp(position.y, viewport.position.y, viewport.end.y + texture.get_size().y)
 
 func HideMouseAndShowNewCursor(b : bool):
 	if b:
