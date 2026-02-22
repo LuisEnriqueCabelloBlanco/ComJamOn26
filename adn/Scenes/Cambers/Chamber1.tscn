@@ -70,7 +70,6 @@ rendering_quadrant_size = 128
 
 [node name="Player" parent="." unique_id=1336915041 node_paths=PackedStringArray("visibleLayer") instance=ExtResource("3_0g47n")]
 position = Vector2(-182, 717)
-collision_layer = 2
 collision_mask = 3
 visibleLayer = NodePath("../TileMapLayer")
 
