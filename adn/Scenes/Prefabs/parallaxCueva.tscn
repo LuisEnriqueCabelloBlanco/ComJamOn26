@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://exqja4ogmfp3"]
+
+[ext_resource type="Texture2D" uid="uid://bng2l1u21gyko" path="res://Assets/Fondos/CuevaDetras.png" id="1_blamw"]
+[ext_resource type="Texture2D" uid="uid://cra86ttuhallh" path="res://Assets/Fondos/CuevaMedio.png" id="2_stqo4"]
+
+[node name="ParallaxCueva" type="Node2D" unique_id=382343261]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=897280309]
+scroll_scale = Vector2(2, 2)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+repeat_times = 2
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D" unique_id=373092772]
+position = Vector2(-891, -508)
+texture = ExtResource("1_blamw")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=159134000]
+scroll_scale = Vector2(1.7, 1.7)
+scroll_offset = Vector2(0, 485)
+repeat_size = Vector2(3840, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=401408039]
+position = Vector2(-891, -508)
+texture = ExtResource("2_stqo4")
+centered = false

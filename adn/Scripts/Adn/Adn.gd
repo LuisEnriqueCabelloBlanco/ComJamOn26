@@ -34,6 +34,7 @@ func UpdateMutations():
 		mutationCont.patern2.emit(ResolvePatern2())
 		mutationCont.patern3.emit(ResolvePatern3())
 
+# Salto fuerte TA**T
 func ResolvePatern1() -> bool:
 	if (links[0].base != null && links[0].base.baseType == Base.BaseType.THYMINE
 	&& links[1].base != null && links[1].base.baseType == Base.BaseType.ADENINE
@@ -41,7 +42,7 @@ func ResolvePatern1() -> bool:
 		return true
 	return false
 
-# *AG*G
+# Vision nocturna C*GG*
 func ResolvePatern2() -> bool:
 	if (links[0].base != null && links[0].base.baseType == Base.BaseType.CYTOSINE
 		&& links[2].base != null && links[2].base.baseType == Base.BaseType.GUANINE
@@ -49,6 +50,7 @@ func ResolvePatern2() -> bool:
 		return true
 	return false
 	
+# Superfuerza *AG*G
 func ResolvePatern3() -> bool:
 	if (links[1].base != null && links[1].base.baseType == Base.BaseType.ADENINE
 	&& links[2].base != null && links[2].base.baseType == Base.BaseType.GUANINE

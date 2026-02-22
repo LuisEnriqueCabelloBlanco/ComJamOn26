@@ -6,32 +6,63 @@
 
 [node name="ParallaxPrefabCueva" type="Node2D" unique_id=876121233]
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=470001943]
+[node name="Detras1" type="Parallax2D" parent="." unique_id=470001943]
 
-[node name="CuevaDetras" type="Sprite2D" parent="Parallax2D" unique_id=2142466531]
+[node name="CuevaDetras" type="Sprite2D" parent="Detras1" unique_id=2142466531]
 position = Vector2(-1920, -540)
 texture = ExtResource("1_cvicm")
 
-[node name="CuevaDetras2" type="Sprite2D" parent="Parallax2D" unique_id=239504465]
+[node name="CuevaDetras2" type="Sprite2D" parent="Detras1" unique_id=239504465]
 position = Vector2(1920, -540)
 texture = ExtResource("1_cvicm")
 
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1985891286]
+[node name="Medio1" type="Parallax2D" parent="." unique_id=1985891286]
 
-[node name="CuevaMedio" type="Sprite2D" parent="Parallax2D2" unique_id=789733129]
+[node name="CuevaMedio" type="Sprite2D" parent="Medio1" unique_id=789733129]
 position = Vector2(-1920, -540)
 texture = ExtResource("2_eofkq")
 
-[node name="CuevaMedio2" type="Sprite2D" parent="Parallax2D2" unique_id=1025437867]
+[node name="CuevaMedio2" type="Sprite2D" parent="Medio1" unique_id=1025437867]
 position = Vector2(1920, -540)
 texture = ExtResource("2_eofkq")
 
-[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1956000450]
+[node name="Frente1" type="Parallax2D" parent="." unique_id=1956000450]
 
-[node name="CuevaFrente" type="Sprite2D" parent="Parallax2D3" unique_id=1857706640]
+[node name="CuevaFrente" type="Sprite2D" parent="Frente1" unique_id=1857706640]
 position = Vector2(-1920, -540)
 texture = ExtResource("3_7mkk3")
 
-[node name="CuevaFrente2" type="Sprite2D" parent="Parallax2D3" unique_id=1736939546]
+[node name="CuevaFrente2" type="Sprite2D" parent="Frente1" unique_id=1736939546]
+position = Vector2(1920, -544)
+texture = ExtResource("3_7mkk3")
+
+[node name="Detras2" type="Parallax2D" parent="." unique_id=1266919376]
+
+[node name="CuevaDetras" type="Sprite2D" parent="Detras2" unique_id=1567108822]
+position = Vector2(5760, -540)
+texture = ExtResource("1_cvicm")
+
+[node name="CuevaDetras2" type="Sprite2D" parent="Detras2" unique_id=875166533]
+position = Vector2(9600, -540)
+texture = ExtResource("1_cvicm")
+
+[node name="Medio2" type="Parallax2D" parent="." unique_id=558164160]
+
+[node name="CuevaMedio" type="Sprite2D" parent="Medio2" unique_id=1663652212]
+position = Vector2(5760, -540)
+texture = ExtResource("2_eofkq")
+
+[node name="CuevaMedio2" type="Sprite2D" parent="Medio2" unique_id=1702761689]
+position = Vector2(9600, -540)
+texture = ExtResource("2_eofkq")
+
+[node name="Frente2" type="Parallax2D" parent="." unique_id=1172699908]
+scroll_offset = Vector2(7680, 0)
+
+[node name="CuevaFrente" type="Sprite2D" parent="Frente2" unique_id=1982358087]
+position = Vector2(-1920, -540)
+texture = ExtResource("3_7mkk3")
+
+[node name="CuevaFrente2" type="Sprite2D" parent="Frente2" unique_id=2009354521]
 position = Vector2(1920, -544)
 texture = ExtResource("3_7mkk3")
