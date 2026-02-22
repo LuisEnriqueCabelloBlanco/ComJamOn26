@@ -9,7 +9,7 @@
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1056919474]
 scroll_scale = Vector2(2, 2)
-scroll_offset = Vector2(0, 400)
+scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 repeat_times = 2
 
@@ -20,7 +20,7 @@ centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1155356157]
 scroll_scale = Vector2(1.9, 1.9)
-scroll_offset = Vector2(0, 400)
+scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=144863769]
@@ -30,7 +30,7 @@ centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=796951890]
 scroll_scale = Vector2(1.8, 1.8)
-scroll_offset = Vector2(0, 400)
+scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Parallax2D3" unique_id=636402705]
@@ -40,7 +40,7 @@ centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="." unique_id=192125205]
 scroll_scale = Vector2(1.7, 1.7)
-scroll_offset = Vector2(0, 400)
+scroll_offset = Vector2(0, 485)
 repeat_size = Vector2(3840, 0)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=1414740178]

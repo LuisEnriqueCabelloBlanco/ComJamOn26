@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_4vov6"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_fvtcw"]
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="2_li2i7"]
+[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxFabrica.tscn" id="2_m2bet"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="3_jh8fe"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="4_u04mk"]
 [ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="5_li2i7"]
-[ext_resource type="Script" uid="uid://bm42r2oxq06ym" path="res://Scripts/wooden_box.gd" id="6_yvac4"]
 [ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Prefabs/Door.tscn" id="8_wduv5"]
 [ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Prefabs/Button.tscn" id="9_m2bet"]
 
@@ -17,6 +17,8 @@ position = Vector2(377, 539)
 script = ExtResource("1_4vov6")
 followNode = NodePath("../Player")
 metadata/_custom_type_script = "uid://gdcaqo533anm"
+
+[node name="ParallaxPrefab" parent="." unique_id=679643591 instance=ExtResource("2_m2bet")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1827657214]
 scale = Vector2(0.5, 0.5)
@@ -31,16 +33,12 @@ position = Vector2(3885, 475)
 
 [node name="Wooden_Box" parent="." unique_id=2042465066 instance=ExtResource("4_u04mk")]
 position = Vector2(1493, 716)
-collision_layer = 3
-script = ExtResource("6_yvac4")
 
 [node name="Metal_Box" parent="." unique_id=1751793009 instance=ExtResource("5_li2i7")]
 position = Vector2(847, 719)
-collision_layer = 3
 
 [node name="Metal_Box2" parent="." unique_id=362245638 instance=ExtResource("5_li2i7")]
 position = Vector2(2777, 485)
-collision_layer = 3
 
 [node name="Door" parent="." unique_id=527798983 instance=ExtResource("8_wduv5")]
 position = Vector2(3519, 396)
