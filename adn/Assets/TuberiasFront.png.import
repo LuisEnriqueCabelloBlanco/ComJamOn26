@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://creln4f7eum57"
-path="res://.godot/imported/TuberiasFront.png-0ab72d06054781fe3e0c7a6054c17a14.ctex"
+path="res://.godot/imported/TuberiasFront.png-a358564da045f375db8cf9c333773605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Cambers/TuberiasFront.png"
-dest_files=["res://.godot/imported/TuberiasFront.png-0ab72d06054781fe3e0c7a6054c17a14.ctex"]
+source_file="res://Assets/TuberiasFront.png"
+dest_files=["res://.godot/imported/TuberiasFront.png-a358564da045f375db8cf9c333773605.ctex"]
 
 [params]
 
