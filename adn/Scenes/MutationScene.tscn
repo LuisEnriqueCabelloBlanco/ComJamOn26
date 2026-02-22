@@ -10,15 +10,12 @@
 [ext_resource type="Script" path="res://Scripts/cursor.gd" id="8_pw4gx"]
 [ext_resource type="Texture2D" uid="uid://bhw6nw5pf3ovr" path="res://Assets/CURSOR(1).png" id="8_tmaqv"]
 [ext_resource type="Texture2D" uid="uid://mlml47t8j0om" path="res://Assets/PlaceholdersGuapos/pulltab.png" id="10_2imwv"]
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://Scripts/Adn/libreta.gd" id="11_17xr8"]
 [ext_resource type="Script" path="res://Scripts/Adn/pulltab.gd" id="11_dfqqr"]
-=======
 [ext_resource type="Script" uid="uid://dory4ooyxlfxt" path="res://Scripts/Adn/libreta.gd" id="11_17xr8"]
 [ext_resource type="Script" uid="uid://cpue4ukcg0nbm" path="res://Scripts/Adn/pulltab.gd" id="11_dfqqr"]
 [ext_resource type="Texture2D" uid="uid://1acijeko4tao" path="res://Assets/PlaceholdersGuapos/citosinaPlaceholder.png" id="11_dkk6k"]
 [ext_resource type="Texture2D" uid="uid://dioalexb82jnb" path="res://Assets/PlaceholdersGuapos/carpet.png" id="11_rmlqi"]
->>>>>>> 3571b08798fad5fd03b686a0b1fde6774e1a01cf
 [ext_resource type="Texture2D" uid="uid://dpkmc4tbpmool" path="res://Assets/PlaceholdersGuapos/nota1.png" id="12_dfqqr"]
 [ext_resource type="Texture2D" uid="uid://dnd284sqn8b2k" path="res://Assets/PlaceholdersGuapos/cursor.png" id="12_heqyp"]
 [ext_resource type="Script" uid="uid://dp4ydqkcvu2rg" path="res://Scenes/av_pag.gd" id="12_kblxu"]
