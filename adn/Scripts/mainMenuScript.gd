@@ -28,10 +28,17 @@ func changeScene():
 
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_packed(CreditsScene)
+	$UI.visible = false
+	$creditsText.visible = true
 	pass # Replace with function body.
 
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+	pass # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	$UI.visible = true
+	$creditsText.visible = false
 	pass # Replace with function body.
