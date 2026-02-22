@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dwdbmcgiomeqi"]
+
+[ext_resource type="Script" uid="uid://dk8qtndvolwfp" path="res://Scripts/note_unlock.gd" id="1_10n42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x68od"]
+size = Vector2(103, 66)
+
+[node name="NoteUnlock" type="Area2D" unique_id=585051422]
+script = ExtResource("1_10n42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=626452620]
+position = Vector2(-2, 20)
+shape = SubResource("RectangleShape2D_x68od")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
