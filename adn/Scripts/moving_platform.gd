@@ -7,6 +7,8 @@ var forward = true
 var velocity = Vector2(0,0)
 @export var target = 0
 @export var speed = 200
+@export var is_active = false
+
 
 func _physics_process(delta: float) -> void:
 	var target_position = points[target].global_position
@@ -16,7 +18,8 @@ func _physics_process(delta: float) -> void:
 		siguiente_punto()
 		return
 	velocity = direction * speed * delta
-	global_position += velocity
+	if is_active:
+		global_position += velocity
 
 func siguiente_punto():
 	if forward:
@@ -33,6 +36,7 @@ func siguiente_punto():
 			target += 1
 
 
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.platform = self
@@ -41,3 +45,13 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Player:
 		if body.platform == self:
 			body.platform = null
+
+
+func _on_button_button_pressed() -> void:
+	is_active = true
+	pass # Replace with function body.
+
+
+func _on_button_button_released() -> void:
+	is_active = false
+	pass # Replace with function body.
