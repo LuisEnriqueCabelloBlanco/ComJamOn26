@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var libreta : Libreta
-@export var tabs : Array[Texture]
+@export var advance = true
 
 func _ready() -> void:
 	libreta = get_parent() as Libreta
@@ -11,9 +11,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		var mouseEvent = event as InputEventMouseButton
 		if mouseEvent.button_index == MouseButton.MOUSE_BUTTON_LEFT:
 			if mouseEvent.pressed:
-				if libreta.abierto:
-					libreta.cerrar()
-					texture = tabs[0]
+				if advance:
+					libreta.siguiente()
 				else:
-					libreta.abrir()
-					texture = tabs[1]
+					libreta.previo()

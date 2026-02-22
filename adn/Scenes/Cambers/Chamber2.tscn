@@ -8,9 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dcfr236n0kaw7" path="res://Assets/Fondos/BarrilesMedio.png" id="4_p5twe"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="4_ylfud"]
 [ext_resource type="Texture2D" uid="uid://c4y55vuoo0awr" path="res://Assets/Fondos/BarrilesFront.png" id="5_8cg6m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x68od"]
-size = Vector2(103, 66)
+[ext_resource type="PackedScene" uid="uid://dwdbmcgiomeqi" path="res://Scenes/Prefabs/note_unlock.tscn" id="9_5hiie"]
 
 [node name="Chamber2" type="Node2D" unique_id=1627054782]
 
@@ -63,9 +61,5 @@ invisibleLayer = NodePath("../InvisibleLayer")
 [node name="ChamberGoal" parent="." unique_id=926119434 instance=ExtResource("4_ylfud")]
 position = Vector2(326, 379)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1572940175]
+[node name="NoteUnlock" parent="." unique_id=585051422 instance=ExtResource("9_5hiie")]
 position = Vector2(695, 824)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=119148740]
-position = Vector2(-2, 20)
-shape = SubResource("RectangleShape2D_x68od")

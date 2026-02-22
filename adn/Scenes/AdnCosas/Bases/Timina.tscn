@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cuxlll7dmv5sc"]
 
 [ext_resource type="Script" uid="uid://gtpmkuvesu6c" path="res://Scripts/Adn/Base.gd" id="1_wbvgo"]
+[ext_resource type="Texture2D" uid="uid://dtpqqvrgn17u6" path="res://Assets/UI/PARA QUE PONGAIS LAS LETRAS DE LA CADENA ENCIMA.png" id="2_o5m5b"]
+
+[sub_resource type="Theme" id="Theme_326qm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8syha"]
 size = Vector2(341, 202)
@@ -10,19 +13,19 @@ scale = Vector2(0.55, 0.55)
 script = ExtResource("1_wbvgo")
 baseType = 3
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1840307251]
-offset_left = -170.90909
-offset_top = -101.81818
-offset_right = 170.90909
-offset_bottom = 101.81818
-mouse_filter = 2
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1562334230]
+scale = Vector2(1.4486325, 1.4486325)
+texture = ExtResource("2_o5m5b")
 
-[node name="Label" type="Label" parent="." unique_id=1280635980]
+[node name="Label" type="Label" parent="." unique_id=224547073]
 offset_left = -49.090908
 offset_top = -100.0
 offset_right = 70.90909
 offset_bottom = 100.0
+theme = SubResource("Theme_326qm")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 145
 text = "T"
 
