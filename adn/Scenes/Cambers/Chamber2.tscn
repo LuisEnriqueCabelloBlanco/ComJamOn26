@@ -2,12 +2,9 @@
 
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="1_imolu"]
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="2_gmm4m"]
-[ext_resource type="Texture2D" uid="uid://qr5cgh1en6s3" path="res://Assets/Fondos/FondoTotal.png" id="2_x68od"]
-[ext_resource type="Texture2D" uid="uid://b0v784kv5w22" path="res://Assets/Fondos/BarrilesBack.png" id="3_5hiie"]
+[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxFabrica.tscn" id="2_vspvp"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_14hbm"]
-[ext_resource type="Texture2D" uid="uid://dcfr236n0kaw7" path="res://Assets/Fondos/BarrilesMedio.png" id="4_p5twe"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="4_ylfud"]
-[ext_resource type="Texture2D" uid="uid://c4y55vuoo0awr" path="res://Assets/Fondos/BarrilesFront.png" id="5_8cg6m"]
 [ext_resource type="PackedScene" uid="uid://dwdbmcgiomeqi" path="res://Scenes/Prefabs/note_unlock.tscn" id="9_5hiie"]
 
 [node name="Chamber2" type="Node2D" unique_id=1627054782]
@@ -18,46 +15,7 @@ script = ExtResource("2_gmm4m")
 followNode = NodePath("../Player")
 metadata/_custom_type_script = "uid://gdcaqo533anm"
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=206051871]
-scroll_scale = Vector2(2, 2)
-scroll_offset = Vector2(-3, 485)
-repeat_size = Vector2(3840, 0)
-repeat_times = 2
-
-[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D" unique_id=2139729346]
-position = Vector2(-891, -508)
-texture = ExtResource("2_x68od")
-centered = false
-
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1741614386]
-scroll_scale = Vector2(1.9, 1.9)
-scroll_offset = Vector2(0, 485)
-repeat_size = Vector2(3840, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1560779191]
-position = Vector2(-891, -508)
-texture = ExtResource("3_5hiie")
-centered = false
-
-[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1424713431]
-scroll_scale = Vector2(1.8, 1.8)
-scroll_offset = Vector2(0, 485)
-repeat_size = Vector2(3840, 0)
-
-[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D3" unique_id=1419789985]
-position = Vector2(-891, -508)
-texture = ExtResource("4_p5twe")
-centered = false
-
-[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1625927819]
-scroll_scale = Vector2(1.7, 1.7)
-scroll_offset = Vector2(0, 485)
-repeat_size = Vector2(3840, 0)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=1926135337]
-position = Vector2(-891, -508)
-texture = ExtResource("5_8cg6m")
-centered = false
+[node name="ParallaxPrefab" parent="." unique_id=679643591 instance=ExtResource("2_vspvp")]
 
 [node name="VisibleLayer" type="TileMapLayer" parent="." unique_id=344351235]
 scale = Vector2(0.5, 0.5)

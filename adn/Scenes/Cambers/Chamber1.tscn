@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_k2ok7"]
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="2_8jm6e"]
-[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxPrefab.tscn" id="2_spenh"]
+[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxFabrica.tscn" id="2_spenh"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_0g47n"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="5_0g47n"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="8_seoxu"]

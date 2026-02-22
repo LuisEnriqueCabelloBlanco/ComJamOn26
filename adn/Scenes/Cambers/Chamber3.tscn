@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_4vov6"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_fvtcw"]
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="2_li2i7"]
+[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxFabrica.tscn" id="2_m2bet"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="3_jh8fe"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="4_u04mk"]
 [ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="5_li2i7"]
@@ -16,6 +17,8 @@ position = Vector2(377, 539)
 script = ExtResource("1_4vov6")
 followNode = NodePath("../Player")
 metadata/_custom_type_script = "uid://gdcaqo533anm"
+
+[node name="ParallaxPrefab" parent="." unique_id=679643591 instance=ExtResource("2_m2bet")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1827657214]
 scale = Vector2(0.5, 0.5)
