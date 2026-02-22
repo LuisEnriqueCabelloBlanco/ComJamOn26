@@ -5,6 +5,7 @@ var currentScene = 0
 @export var levels : Array[PackedScene]
 @export var topViewportNode : Node
 @export var botViewportNode : Node
+@export var mainMenu : PackedScene
 
 func _ready() -> void:
 	GameManager.restart_level.connect(restart_level)
@@ -23,7 +24,10 @@ func restart_level():
 
 func next_level():
 	currentScene += 1
-	load_target_scene(currentScene)
+	if currentScene >= levels.size():
+		get_tree().change_scene_to_packed(mainMenu)
+	else:
+		load_target_scene(currentScene)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reiniciar"):
