@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrwdaqkplrdu"
-path="res://.godot/imported/INTERFAZ sin teclas.png-1b5049b7243c311490a3988723a9bdfc.ctex"
+uid="uid://c1kc61tb2oim6"
+path="res://.godot/imported/restart button.png-28e69c82b59879228d3e9390d60cc518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/INTERFAZ sin teclas.png"
-dest_files=["res://.godot/imported/INTERFAZ sin teclas.png-1b5049b7243c311490a3988723a9bdfc.ctex"]
+source_file="res://Assets/UI/restart button.png"
+dest_files=["res://.godot/imported/restart button.png-28e69c82b59879228d3e9390d60cc518.ctex"]
 
 [params]
 

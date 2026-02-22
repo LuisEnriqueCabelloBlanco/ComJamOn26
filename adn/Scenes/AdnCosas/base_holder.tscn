@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdlgsyob2lbyu" path="res://Scripts/Adn/BaseDrawer.gd" id="1_h6y1i"]
 [ext_resource type="PackedScene" uid="uid://bqvhc8v8x676m" path="res://Scenes/AdnCosas/Bases/Adenina.tscn" id="2_gxrxp"]
-[ext_resource type="Texture2D" uid="uid://bkx0q06do5iq0" path="res://Assets/INTERFAZ etilo de tecla 1 TAMAÑO AJUSTADO.png" id="3_gxrxp"]
+[ext_resource type="Texture2D" uid="uid://bkx0q06do5iq0" path="res://Assets/UI/INTERFAZ etilo de tecla 1 TAMAÑO AJUSTADO.png" id="3_gxrxp"]
 
 [node name="Holder1" type="Node2D" unique_id=1838399395]
 script = ExtResource("1_h6y1i")

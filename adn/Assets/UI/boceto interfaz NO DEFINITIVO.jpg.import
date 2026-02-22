@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bl3ejqukgvypn"
-path="res://.godot/imported/boceto interfaz NO DEFINITIVO.jpg-9f36c577d12cb20cbae93d6e8c207f95.ctex"
+path="res://.godot/imported/boceto interfaz NO DEFINITIVO.jpg-043ab9b2b9bf14e32b9409174bd4b66d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/boceto interfaz NO DEFINITIVO.jpg"
-dest_files=["res://.godot/imported/boceto interfaz NO DEFINITIVO.jpg-9f36c577d12cb20cbae93d6e8c207f95.ctex"]
+source_file="res://Assets/UI/boceto interfaz NO DEFINITIVO.jpg"
+dest_files=["res://.godot/imported/boceto interfaz NO DEFINITIVO.jpg-043ab9b2b9bf14e32b9409174bd4b66d.ctex"]
 
 [params]
 
