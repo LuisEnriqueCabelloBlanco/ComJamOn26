@@ -57,10 +57,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CreditsScene" type="Node2D" unique_id=1707684042]
-script = ExtResource("1_aw02a")
-mainMenu = ExtResource("2_e6qoq")
-
 [node name="FondoLaboratorioBack" type="Sprite2D" parent="." unique_id=496184441]
 position = Vector2(968, 530.5)
 scale = Vector2(0.50364584, 1.0138888)
