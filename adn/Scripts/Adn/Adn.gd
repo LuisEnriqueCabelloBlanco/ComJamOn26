@@ -34,17 +34,23 @@ func UpdateMutations():
 		mutationCont.patern3.emit(ResolvePatern3())
 
 func ResolvePatern1() -> bool:
-	if links[0].base != null && links[0].base.baseType == Base.BaseType.THYMINE:
+	if (links[0].base != null && links[0].base.baseType == Base.BaseType.THYMINE
+	&& links[1].base != null && links[1].base.baseType == Base.BaseType.ADENINE
+	&& links[4].base != null && links[4].base.baseType == Base.BaseType.THYMINE):
 		return true
 	return false
 
 func ResolvePatern2() -> bool:
-	if links[0].base != null && links[0].base.baseType == Base.BaseType.GUANINE:
+	if (links[0].base != null && links[0].base.baseType == Base.BaseType.CYTOSINE
+		&& links[2].base != null && links[2].base.baseType == Base.BaseType.GUANINE
+		&& links[3].base != null && links[3].base.baseType == Base.BaseType.GUANINE):
 		return true
 	return false
 	
 func ResolvePatern3() -> bool:
-	if links[0].base != null && links[0].base.baseType == Base.BaseType.ADENINE:
+	if (links[1].base != null && links[1].base.baseType == Base.BaseType.ADENINE
+	&& links[2].base != null && links[2].base.baseType == Base.BaseType.GUANINE
+	&& links[4].base != null && links[4].base.baseType == Base.BaseType.GUANINE):
 		return true
 	return false
 
