@@ -23,5 +23,5 @@ position = Vector2(1059, 740)
 position = Vector2(920, 910)
 
 [node name="ResetButton" parent="." unique_id=1285341756 instance=ExtResource("3_babhw")]
-position = Vector2(1850, 69)
+position = Vector2(1711, 92)
 scale = Vector2(0.515, 0.515)

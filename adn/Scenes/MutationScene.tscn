@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://cai4ri7sa8rs4" path="res://Assets/UI/carpet/Carpeta.png" id="12_dkk6k"]
 [ext_resource type="Script" uid="uid://dp4ydqkcvu2rg" path="res://Scenes/av_pag.gd" id="12_kblxu"]
 [ext_resource type="Texture2D" uid="uid://d2488x430k226" path="res://Assets/UI/carpet/Flecha.png" id="13_tnjeu"]
+[ext_resource type="Texture2D" uid="uid://dwb5ls7cpc4bt" path="res://Assets/UI/ICONO POWER UP CABRA.png" id="18_tjxgn"]
+[ext_resource type="Script" uid="uid://chc745qnpwskf" path="res://Scenes/iconos_powerups.gd" id="18_w4mh1"]
+[ext_resource type="Texture2D" uid="uid://dtjm74t3smymc" path="res://Assets/UI/ICONO POWER UP OJOS.png" id="19_w4mh1"]
+[ext_resource type="Texture2D" uid="uid://q0ewtotcx6ah" path="res://Assets/UI/ICONO POWER UP SALTO.png" id="20_pivj6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlqi"]
 size = Vector2(168.00009, 133.00002)
@@ -26,6 +30,9 @@ size = Vector2(170.49997, 137)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkcdx"]
 size = Vector2(82.23535, 80.30289)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w4mh1"]
+font_color = Color(0.57254905, 1, 1, 1)
 
 [node name="MutationScene" type="Node2D" unique_id=1486565592]
 script = ExtResource("1_i2nsj")
@@ -114,6 +121,34 @@ scale = Vector2(0.5, 0.5)
 [node name="cursor" type="Sprite2D" parent="." unique_id=538416078]
 texture = ExtResource("8_tmaqv")
 script = ExtResource("8_pw4gx")
+
+[node name="IconosPowerups" type="Node2D" parent="." unique_id=1216277814 node_paths=PackedStringArray("iconoFuerza", "iconoSalto", "iconoVision")]
+position = Vector2(175, 898)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("18_w4mh1")
+iconoFuerza = NodePath("IconoPowerUpCabra")
+iconoSalto = NodePath("IconoPowerUpSalto")
+iconoVision = NodePath("IconoPowerUpOjos")
+
+[node name="IconoPowerUpCabra" type="Sprite2D" parent="IconosPowerups" unique_id=1125324986]
+position = Vector2(50, 35)
+texture = ExtResource("18_tjxgn")
+
+[node name="IconoPowerUpOjos" type="Sprite2D" parent="IconosPowerups" unique_id=910217284]
+position = Vector2(263, 37)
+texture = ExtResource("19_w4mh1")
+
+[node name="IconoPowerUpSalto" type="Sprite2D" parent="IconosPowerups" unique_id=1907951266]
+position = Vector2(477, 38)
+texture = ExtResource("20_pivj6")
+
+[node name="Label" type="Label" parent="." unique_id=493861391]
+offset_left = 46.0
+offset_top = 35.0
+offset_right = 356.0
+offset_bottom = 67.0
+text = "Pulsa R para volver a empezar"
+label_settings = SubResource("LabelSettings_w4mh1")
 
 [connection signal="patern1" from="." to="." method="signalToGM1"]
 [connection signal="patern2" from="." to="." method="signalToGM2"]
