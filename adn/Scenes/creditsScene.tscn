@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://fcte2s6arj0f" path="res://Scenes/creditsScript.gd" id="1_aw02a"]
 [ext_resource type="Texture2D" uid="uid://1ix82fxn6tn7" path="res://Assets/Fondos/FondoLaboratorioBack.png" id="1_e6qoq"]
 [ext_resource type="Texture2D" uid="uid://dtsq15mq1lkms" path="res://Assets/Fondos/FondoLaboratorioMain.png" id="2_aw02a"]
-[ext_resource type="PackedScene" uid="uid://jy6lnyhh8jiu" path="res://Scenes/MainMenu.tscn" id="2_e6qoq"]
 [ext_resource type="Texture2D" uid="uid://dh2y8vf16pgis" path="res://Assets/Vitrina.png" id="3_biyxm"]
 [ext_resource type="Texture2D" uid="uid://d1kp78rnak2fs" path="res://Assets/Silueta vitrina Spritesheet.PNG" id="4_unl4p"]
 
@@ -56,6 +55,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[node name="CreditsScene" type="Node2D" unique_id=1707684042]
+script = ExtResource("1_aw02a")
 
 [node name="FondoLaboratorioBack" type="Sprite2D" parent="." unique_id=496184441]
 position = Vector2(968, 530.5)
