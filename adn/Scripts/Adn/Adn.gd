@@ -11,10 +11,11 @@ var links: Array[Link]
 
 func _ready() -> void:
 	var nodes = get_children()
-	
 	for node in nodes:
 		if node is Link:
 			links.push_back(node as Link)
+	
+	GameManager.on_player_readied.connect(UpdateMutations)
 
 ## Recorre la lista de las bases actualmente seleccionadas y activar o desactiva powerups en función
 func UpdateMutations():
@@ -40,6 +41,7 @@ func ResolvePatern1() -> bool:
 		return true
 	return false
 
+# *AG*G
 func ResolvePatern2() -> bool:
 	if (links[0].base != null && links[0].base.baseType == Base.BaseType.CYTOSINE
 		&& links[2].base != null && links[2].base.baseType == Base.BaseType.GUANINE

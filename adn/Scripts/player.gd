@@ -1,5 +1,5 @@
-extends CharacterBody2D
 class_name Player
+extends CharacterBody2D
 
 @export_subgroup("Nodes")
 @export var gravity_component:GravityComponent
@@ -37,11 +37,10 @@ func _ready() -> void:
 	GameManager.pattern2.connect(powerUp2)
 	GameManager.pattern3.connect(powerUp3)
 	
-	#GameManager.pattern3.emit(1) # fuerza activada por default para testing
+	GameManager.on_player_readied.emit()
 	
 	night_vision_component.loadNVCLayers(visibleLayer, invisibleLayer)
-	
-	
+
 func powerUp1(active:bool):
 	jump_component.set_aditional_jump(active)
 	print("Mutacion1",active)
