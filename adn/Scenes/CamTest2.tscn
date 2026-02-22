@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://chjgqw2luivif"]
 
-[ext_resource type="Script" path="res://Scripts/SceneManger.gd" id="1_0lk4n"]
+[ext_resource type="Script" uid="uid://d4exha62y3uv6" path="res://Scripts/SceneManger.gd" id="1_0lk4n"]
 [ext_resource type="PackedScene" uid="uid://bqg2or04gtard" path="res://Scenes/Cambers/Chamber1.tscn" id="1_g1kca"]
-[ext_resource type="PackedScene" uid="uid://cxwddtxxobei" path="res://Scenes/MutationScene.tscn" id="2_g1kca"]
+[ext_resource type="PackedScene" uid="uid://34tfilamdvq5" path="res://Scenes/MutationScene.tscn" id="2_g1kca"]
 [ext_resource type="PackedScene" uid="uid://cw1o1vswfu6d3" path="res://Scenes/Cambers/Chamber2.tscn" id="3_2y502"]
-[ext_resource type="PackedScene" uid="uid://ct68ie5cod4st" path="res://Scenes/Cambers/Chamber3.tscn" id="4_c7rru"]
-[ext_resource type="PackedScene" uid="uid://dacv2itub0ib0" path="res://Scenes/Cambers/Chamber4.tscn" id="5_fjide"]
-[ext_resource type="PackedScene" uid="uid://bipmmx6jxu2er" path="res://Scenes/Cambers/Chamber5.tscn" id="6_7yn6f"]
+[ext_resource type="PackedScene" path="res://Scenes/Cambers/Chamber3.tscn" id="4_c7rru"]
+[ext_resource type="PackedScene" path="res://Scenes/Cambers/Chamber4.tscn" id="5_fjide"]
+[ext_resource type="PackedScene" path="res://Scenes/Cambers/Chamber5.tscn" id="6_7yn6f"]
 
 [node name="CamTest2" type="Control" unique_id=1002739137 node_paths=PackedStringArray("topViewportNode", "botViewportNode")]
 layout_mode = 3

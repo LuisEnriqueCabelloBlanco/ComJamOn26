@@ -8,4 +8,4 @@ func toggleStrength(active:bool):
 	pass
 
 func is_active() -> bool:
-	return power_active #valor hardcodeado para testing
+	return power_active
