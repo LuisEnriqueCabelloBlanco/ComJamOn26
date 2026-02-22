@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dn85q4tl7ugwb"]
 
 [ext_resource type="Script" uid="uid://gtpmkuvesu6c" path="res://Scripts/Adn/Base.gd" id="1_asrc0"]
-[ext_resource type="Texture2D" uid="uid://1acijeko4tao" path="res://Assets/PlaceholdersGuapos/citosinaPlaceholder.png" id="2_asrc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8syha"]
 size = Vector2(341, 202)
@@ -11,14 +10,25 @@ scale = Vector2(0.55, 0.55)
 script = ExtResource("1_asrc0")
 baseType = 2
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=925978516]
+offset_left = -170.90909
+offset_top = -101.81818
+offset_right = 170.90909
+offset_bottom = 101.81818
+
+[node name="Label" type="Label" parent="." unique_id=648333829]
+offset_left = -49.090908
+offset_top = -100.0
+offset_right = 70.90909
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 145
+text = "C"
+
 [node name="Area2D" type="Area2D" parent="." unique_id=1062421259]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1606845070]
 shape = SubResource("RectangleShape2D_8syha")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=329602570]
-scale = Vector2(0.5328125, 0.41770837)
-texture = ExtResource("2_asrc0")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

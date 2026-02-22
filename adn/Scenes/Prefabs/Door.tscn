@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdq5u66te5d8x"]
 
-[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_38ogf"]
 [ext_resource type="Script" uid="uid://chko5mli7xcie" path="res://Scenes/door.gd" id="1_mw28t"]
+[ext_resource type="Texture2D" uid="uid://b177isrgstm7v" path="res://Assets/PUERTA.png" id="2_mw28t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27480"]
 size = Vector2(128.155, 256)
@@ -15,6 +15,6 @@ script = ExtResource("1_mw28t")
 shape = SubResource("RectangleShape2D_27480")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=364451825]
-position = Vector2(0, 0.5000076)
-scale = Vector2(1, 2.0078125)
-texture = ExtResource("1_38ogf")
+position = Vector2(0.49999905, 0.5000076)
+scale = Vector2(0.49609378, 0.5333252)
+texture = ExtResource("2_mw28t")

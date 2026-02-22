@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dmr34acimrud3"]
 
 [ext_resource type="Script" uid="uid://bqpbyxlko7k28" path="res://Scenes/buttonPressable.gd" id="1_a506e"]
-[ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="1_p3102"]
+[ext_resource type="Texture2D" uid="uid://b66bwglj0337u" path="res://Assets/BOTON (BOTON).png" id="2_8bxxr"]
+[ext_resource type="Texture2D" uid="uid://tyyvux71n5rf" path="res://Assets/BOTON (BASE).png" id="2_a506e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3102"]
 size = Vector2(256, 50)
@@ -9,9 +10,15 @@ size = Vector2(256, 50)
 [node name="Button" type="Node2D" unique_id=44048984]
 script = ExtResource("1_a506e")
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2079297138]
+position = Vector2(0.9999999, 16)
+scale = Vector2(0.19000001, 0.0992736)
+texture = ExtResource("2_8bxxr")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1339096226]
-scale = Vector2(2, 0.39062503)
-texture = ExtResource("1_p3102")
+position = Vector2(0, 13.999996)
+scale = Vector2(0.18595622, 0.09443098)
+texture = ExtResource("2_a506e")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1112566236]
 collision_layer = 2

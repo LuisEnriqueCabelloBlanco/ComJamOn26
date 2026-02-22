@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_8xl7b"]
 [ext_resource type="Texture2D" uid="uid://bw2mhpiwv6n05" path="res://icon.svg" id="2_8786i"]
-[ext_resource type="TileSet" uid="uid://dng7l66yt0an" path="res://tileSet.tres" id="3_s1m42"]
+[ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="3_s1m42"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="4_vtbtr"]
-[ext_resource type="PackedScene" path="res://Scenes/Button.tscn" id="5_714g7"]
-[ext_resource type="PackedScene" path="res://Scenes/Door.tscn" id="7_66raj"]
+[ext_resource type="PackedScene" uid="uid://dmr34acimrud3" path="res://Scenes/Prefabs/Button.tscn" id="5_714g7"]
+[ext_resource type="PackedScene" uid="uid://bdq5u66te5d8x" path="res://Scenes/Prefabs/Door.tscn" id="7_66raj"]
 [ext_resource type="PackedScene" uid="uid://dic2x2fp54ymh" path="res://Scenes/Platforms/moving_platdorm.tscn" id="8_lm6n6"]
 
 [node name="ChamberT1" type="Node2D" unique_id=320689683]
