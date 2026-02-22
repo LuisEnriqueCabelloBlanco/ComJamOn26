@@ -15,6 +15,8 @@ func _ready() -> void:
 	notaSprite.texture = notas[current]
 
 func abrir():
+	if abierto:
+		return
 	abierto = true
 	visible = true
 	var tween = create_tween().bind_node(self)
@@ -39,7 +41,7 @@ func previo():
 
 func unlock_note(p: int):
 	abrir()
-	if p < unlockedNotes:
-		unlockedNotes += 1
+	if p > unlockedNotes:
+		unlockedNotes = p
 	current = p
 	notaSprite.texture = notas[current] 

@@ -58,10 +58,30 @@ baseScene = ExtResource("5_pw4gx")
 position = Vector2(531, 685)
 baseScene = ExtResource("6_tmaqv")
 
+[node name="IconosPowerups" type="Node2D" parent="." unique_id=1216277814 node_paths=PackedStringArray("iconoFuerza", "iconoSalto", "iconoVision")]
+position = Vector2(175, 898)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("18_w4mh1")
+iconoFuerza = NodePath("IconoPowerUpCabra")
+iconoSalto = NodePath("IconoPowerUpSalto")
+iconoVision = NodePath("IconoPowerUpOjos")
+
+[node name="IconoPowerUpCabra" type="Sprite2D" parent="IconosPowerups" unique_id=1125324986]
+position = Vector2(50, 35)
+texture = ExtResource("18_tjxgn")
+
+[node name="IconoPowerUpOjos" type="Sprite2D" parent="IconosPowerups" unique_id=910217284]
+position = Vector2(263, 37)
+texture = ExtResource("19_w4mh1")
+
+[node name="IconoPowerUpSalto" type="Sprite2D" parent="IconosPowerups" unique_id=1907951266]
+position = Vector2(477, 38)
+texture = ExtResource("20_pivj6")
+
 [node name="Libreta" type="Node2D" parent="." unique_id=1223466290 node_paths=PackedStringArray("notaSprite")]
 position = Vector2(2465.75, 576.4)
 script = ExtResource("11_17xr8")
-notas = Array[Texture]([ExtResource("9_dkk6k"), ExtResource("10_heqyp"), ExtResource("11_tjxgn")])
+notas = Array[Texture]([ExtResource("11_tjxgn"), ExtResource("10_heqyp"), ExtResource("9_dkk6k")])
 notaSprite = NodePath("Nota")
 tweenTime = 0.23
 
@@ -121,26 +141,6 @@ scale = Vector2(0.5, 0.5)
 [node name="cursor" type="Sprite2D" parent="." unique_id=538416078]
 texture = ExtResource("8_tmaqv")
 script = ExtResource("8_pw4gx")
-
-[node name="IconosPowerups" type="Node2D" parent="." unique_id=1216277814 node_paths=PackedStringArray("iconoFuerza", "iconoSalto", "iconoVision")]
-position = Vector2(175, 898)
-scale = Vector2(0.7, 0.7)
-script = ExtResource("18_w4mh1")
-iconoFuerza = NodePath("IconoPowerUpCabra")
-iconoSalto = NodePath("IconoPowerUpSalto")
-iconoVision = NodePath("IconoPowerUpOjos")
-
-[node name="IconoPowerUpCabra" type="Sprite2D" parent="IconosPowerups" unique_id=1125324986]
-position = Vector2(50, 35)
-texture = ExtResource("18_tjxgn")
-
-[node name="IconoPowerUpOjos" type="Sprite2D" parent="IconosPowerups" unique_id=910217284]
-position = Vector2(263, 37)
-texture = ExtResource("19_w4mh1")
-
-[node name="IconoPowerUpSalto" type="Sprite2D" parent="IconosPowerups" unique_id=1907951266]
-position = Vector2(477, 38)
-texture = ExtResource("20_pivj6")
 
 [node name="Label" type="Label" parent="." unique_id=493861391]
 offset_left = 46.0

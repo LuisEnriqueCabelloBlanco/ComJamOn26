@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dacqmkq31dlbg"]
 
 [ext_resource type="Script" uid="uid://cbbjci6tubxak" path="res://Scripts/chamber_goal.gd" id="1_5mate"]
-[ext_resource type="Texture2D" uid="uid://caeqtwxixcu1s" path="res://Assets/PlaceholdersGuapos/goalFag.png" id="2_fjbqq"]
+[ext_resource type="Texture2D" uid="uid://hntvaixperbp" path="res://Assets/ASCENSOR.png" id="2_v10xy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjbqq"]
 
@@ -9,8 +9,9 @@
 script = ExtResource("1_5mate")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=854905710]
-scale = Vector2(0.253, 0.253)
-texture = ExtResource("2_fjbqq")
+position = Vector2(0, -98.64)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_v10xy")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1529638209]
 
