@@ -15,10 +15,10 @@
 [ext_resource type="Script" uid="uid://cpue4ukcg0nbm" path="res://Scripts/Adn/pulltab.gd" id="11_dfqqr"]
 [ext_resource type="Texture2D" uid="uid://cwp84664g4lfy" path="res://Assets/UI/carpet/HojaVision.png" id="11_tjxgn"]
 [ext_resource type="Texture2D" uid="uid://cai4ri7sa8rs4" path="res://Assets/UI/carpet/Carpeta.png" id="12_dkk6k"]
-[ext_resource type="Script" path="res://Scenes/av_pag.gd" id="12_kblxu"]
+[ext_resource type="Script" uid="uid://dp4ydqkcvu2rg" path="res://Scenes/av_pag.gd" id="12_kblxu"]
 [ext_resource type="Texture2D" uid="uid://d2488x430k226" path="res://Assets/UI/carpet/Flecha.png" id="13_tnjeu"]
 [ext_resource type="Texture2D" uid="uid://dwb5ls7cpc4bt" path="res://Assets/UI/ICONO POWER UP CABRA.png" id="18_tjxgn"]
-[ext_resource type="Script" path="res://Scenes/iconos_powerups.gd" id="18_w4mh1"]
+[ext_resource type="Script" uid="uid://chc745qnpwskf" path="res://Scenes/iconos_powerups.gd" id="18_w4mh1"]
 [ext_resource type="Texture2D" uid="uid://dtjm74t3smymc" path="res://Assets/UI/ICONO POWER UP OJOS.png" id="19_w4mh1"]
 [ext_resource type="Texture2D" uid="uid://q0ewtotcx6ah" path="res://Assets/UI/ICONO POWER UP SALTO.png" id="20_pivj6"]
 
