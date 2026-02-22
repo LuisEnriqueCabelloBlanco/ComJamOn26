@@ -1,33 +1,35 @@
-[gd_scene format=3 uid="uid://ct68ie5cod4st"]
+[gd_scene format=4 uid="uid://ct68ie5cod4st"]
 
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_4vov6"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_fvtcw"]
+[ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="2_li2i7"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="3_jh8fe"]
 [ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="4_u04mk"]
 [ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="5_li2i7"]
-
-[sub_resource type="TileSet" id="TileSet_fvtcw"]
-tile_size = Vector2i(256, 256)
+[ext_resource type="Script" uid="uid://bm42r2oxq06ym" path="res://Scripts/wooden_box.gd" id="6_yvac4"]
 
 [node name="Chamber3" type="Node2D" unique_id=623192410]
 
-[node name="CameraFollow" type="Camera2D" parent="." unique_id=1651071453]
+[node name="CameraFollow" type="Camera2D" parent="." unique_id=1651071453 node_paths=PackedStringArray("followNode")]
 position = Vector2(377, 539)
 script = ExtResource("1_4vov6")
+followNode = NodePath("../Player")
 metadata/_custom_type_script = "uid://gdcaqo533anm"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1827657214]
 scale = Vector2(0.5, 0.5)
-tile_set = SubResource("TileSet_fvtcw")
+tile_map_data = PackedByteArray("AAAAAAYABgACAAMAAAABAAYABgACAAMAAAACAAYABgACAAMAAAADAAYABgACAAMAAAAEAAYABgACAAMAAAAFAAYABgACAAMAAAAGAAYABgACAAMAAAAHAAYABgACAAMAAAAIAAYABgACAAMAAAAGAAQABgAAAAQAAAAGAAMABgAAAAQAAAAGAAIABgAAAAQAAAAGAAEABgAAAAQAAAAGAAAABgAAAAQAAAAGAP//BgAAAAQAAAAHAAQABgADAAQAAAAIAAQABgADAAQAAAAIAAMABgADAAQAAAAHAAMABgADAAQAAAAHAAIABgADAAQAAAAHAAEABgADAAQAAAAIAAIABgADAAQAAAAIAAEABgADAAQAAAAIAAAABgADAAQAAAAHAAAABgADAAQAAAAHAP//BgADAAQAAAAIAP//BgADAAQAAAAJAAQABgADAAQAAAAJAAMABgADAAQAAAAJAAIABgADAAQAAAAJAAEABgADAAQAAAAJAP//BgADAAQAAAAJAAAABgADAAQAAAALAAQABgABAAMAAAAJAAYABgACAAMAAAAKAAYABgACAAMAAAALAAYABgABAAQAAAALAAUABgAAAAQAAAAMAAQABgACAAMAAAANAAQABgACAAMAAAAOAAQABgACAAMAAAAPAAQABgACAAMAAAAQAAQABgACAAMAAAARAAQABgACAAMAAAASAAQABgACAAMAAAAKAAEABgADAAQAAAAKAAAABgADAAQAAAAKAP//BgADAAQAAAA=")
+tile_set = ExtResource("2_li2i7")
 
 [node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_fvtcw")]
 position = Vector2(379, 576)
 
 [node name="ChamberGoal" parent="." unique_id=926119434 instance=ExtResource("3_jh8fe")]
-position = Vector2(757, 596)
+position = Vector2(2318, 487)
 
 [node name="Wooden_Box" parent="." unique_id=2042465066 instance=ExtResource("4_u04mk")]
-position = Vector2(1032, 638)
+position = Vector2(610, 716)
+script = ExtResource("6_yvac4")
 
 [node name="Metal_Box" parent="." unique_id=1751793009 instance=ExtResource("5_li2i7")]
-position = Vector2(1242, 641)
+position = Vector2(148, 702)

@@ -37,7 +37,7 @@ func _ready() -> void:
 	GameManager.pattern2.connect(powerUp2)
 	GameManager.pattern3.connect(powerUp3)
 	
-	GameManager.pattern3.emit(1) # fuerza activada por default para testing
+	#GameManager.pattern3.emit(1) # fuerza activada por default para testing
 	
 	night_vision_component.loadNVCLayers(visibleLayer, invisibleLayer)
 	

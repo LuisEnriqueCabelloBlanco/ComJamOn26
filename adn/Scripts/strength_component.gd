@@ -1,9 +1,11 @@
 class_name StrengthComponent
 extends Node
 
+var power_active =false
+
 func toggleStrength(active:bool):
-	print("fuerza activada")
+	power_active = active
 	pass
 
 func is_active() -> bool:
-	return 1 #valor hardcodeado para testing
+	return power_active #valor hardcodeado para testing
