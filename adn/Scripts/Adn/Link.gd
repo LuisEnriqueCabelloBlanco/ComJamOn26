@@ -24,3 +24,4 @@ func PutInBase(base : Base):
 func DropBase():
 	if (self.base != null):
 		self.base.queue_free()
+		self.base = null

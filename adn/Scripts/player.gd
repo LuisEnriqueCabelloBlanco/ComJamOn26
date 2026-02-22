@@ -25,7 +25,6 @@ func _physics_process(delta: float) -> void:
 	if not jump_component.is_jumping and not gravity_component.is_falling:
 		animaton_component.handle_move_animaton(input_component.input_horizontal)
 	push_component.handle_pushing(self)
-	night_vision_component.toggleNightVision(input_component.get_night_vision_input())
 	move_and_slide()
 
 func _ready() -> void:
@@ -37,11 +36,11 @@ func _ready() -> void:
 	
 func powerUp1(active:bool):
 	jump_component.set_aditional_jump(active)
-	print(active)
+	print("Mutacion1",active)
 
 func powerUp2(active:bool):
 	night_vision_component.toggleNightVision(active)
-	print(active)
+	print("Mutacion2",active)
 	
 func powerUp3(active:bool):
-	print(active)
+	print("Mutacion3",active)

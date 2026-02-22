@@ -26,8 +26,9 @@ func UpdateMutations():
 		if links[i].base == null:
 			flag = false
 		i += 1
+	
+	print("ADN Flag Status:",flag)
 	if flag:
-		print(ResolvePatern1(),ResolvePatern2(),ResolvePatern3())
 		mutationCont.patern1.emit(ResolvePatern1())
 		mutationCont.patern2.emit(ResolvePatern2())
 		mutationCont.patern3.emit(ResolvePatern3())
@@ -48,6 +49,9 @@ func ResolvePatern3() -> bool:
 	return false
 
 func ClearLinks():
+	var mutationCont = get_parent() as MutationController
 	for link in links:
 		link.DropBase()
-	UpdateMutations()
+	mutationCont.patern1.emit(false)
+	mutationCont.patern2.emit(false)
+	mutationCont.patern3.emit(false)

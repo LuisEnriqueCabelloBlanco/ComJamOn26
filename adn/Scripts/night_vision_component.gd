@@ -9,10 +9,10 @@ func loadNVCLayers(VL:Node, IL:Node) -> void:
 	visibleLayer = VL
 	invisibleLayer = IL
 
-
+#Activa la vision nocturna
 func toggleNightVision(togglearlo:bool) -> void:
-	if togglearlo:
-		if visibleLayer!=null:
-			visibleLayer.visible = !visibleLayer.visible
-		if invisibleLayer!=null:
-			invisibleLayer.visible = !invisibleLayer.visible
+	print(togglearlo)
+	if visibleLayer!=null:
+		visibleLayer.visible = !togglearlo
+	if invisibleLayer!=null:
+		invisibleLayer.visible = togglearlo

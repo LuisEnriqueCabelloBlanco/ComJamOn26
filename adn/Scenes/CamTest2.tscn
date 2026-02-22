@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chjgqw2luivif"]
 
-[ext_resource type="PackedScene" uid="uid://bqg2or04gtard" path="res://Scenes/Cambers/Chamber1.tscn" id="1_g1kca"]
+[ext_resource type="PackedScene" uid="uid://cw1o1vswfu6d3" path="res://Scenes/Cambers/Chamber2.tscn" id="1_g1kca"]
 [ext_resource type="PackedScene" uid="uid://cxwddtxxobei" path="res://Scenes/MutationScene.tscn" id="2_g1kca"]
 
 [node name="CamTest2" type="Control" unique_id=1002739137]
@@ -35,7 +35,7 @@ size_2d_override = Vector2i(1920, 1080)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="Chamber1" parent="MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" unique_id=320689683 instance=ExtResource("1_g1kca")]
+[node name="Chamber2" parent="MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" unique_id=1627054782 instance=ExtResource("1_g1kca")]
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="MarginContainer/VBoxContainer" unique_id=377499036]
 layout_mode = 2
