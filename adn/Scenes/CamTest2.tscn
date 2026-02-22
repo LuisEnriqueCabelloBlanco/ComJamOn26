@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bqg2or04gtard" path="res://Scenes/Cambers/Chamber1.tscn" id="1_g1kca"]
 [ext_resource type="PackedScene" uid="uid://cxwddtxxobei" path="res://Scenes/MutationScene.tscn" id="2_g1kca"]
 [ext_resource type="PackedScene" uid="uid://cw1o1vswfu6d3" path="res://Scenes/Cambers/Chamber2.tscn" id="3_2y502"]
+[ext_resource type="PackedScene" uid="uid://ct68ie5cod4st" path="res://Scenes/Cambers/Chamber3.tscn" id="4_c7rru"]
+[ext_resource type="PackedScene" uid="uid://dacv2itub0ib0" path="res://Scenes/Cambers/Chamber4.tscn" id="5_fjide"]
+[ext_resource type="PackedScene" uid="uid://bipmmx6jxu2er" path="res://Scenes/Cambers/Chamber5.tscn" id="6_7yn6f"]
 
 [node name="CamTest2" type="Control" unique_id=1002739137 node_paths=PackedStringArray("topViewportNode", "botViewportNode")]
 layout_mode = 3
@@ -13,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0lk4n")
-levels = Array[PackedScene]([ExtResource("1_g1kca"), ExtResource("3_2y502")])
+levels = Array[PackedScene]([ExtResource("1_g1kca"), ExtResource("3_2y502"), ExtResource("4_c7rru"), ExtResource("5_fjide"), ExtResource("6_7yn6f")])
 topViewportNode = NodePath("MarginContainer/VBoxContainer/SubViewportContainer/SubViewport")
 botViewportNode = NodePath("MarginContainer/VBoxContainer/SubViewportContainer2/SubViewport")
 
@@ -40,6 +43,8 @@ size = Vector2i(1320, 538)
 size_2d_override = Vector2i(1920, 1080)
 size_2d_override_stretch = true
 render_target_update_mode = 4
+
+[node name="Chamber2" parent="MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" unique_id=1627054782 instance=ExtResource("3_2y502")]
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="MarginContainer/VBoxContainer" unique_id=377499036]
 layout_mode = 2

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bipmmx6jxu2er"]
+
+[ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="1_rylgt"]
+[ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="2_iyuqh"]
+[ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="3_430dg"]
+[ext_resource type="PackedScene" uid="uid://c2vhfe60n5n0y" path="res://Scenes/Prefabs/wooden_box.tscn" id="4_cvloe"]
+[ext_resource type="PackedScene" uid="uid://bc5m8xmhbsouo" path="res://Scenes/Prefabs/metal_box.tscn" id="5_t2eyp"]
+
+[sub_resource type="TileSet" id="TileSet_j2tah"]
+tile_size = Vector2i(256, 256)
+
+[node name="Chamber5" type="Node2D" unique_id=365480128]
+
+[node name="CameraFollow" type="Camera2D" parent="." unique_id=1806949486]
+position = Vector2(377, 539)
+script = ExtResource("1_rylgt")
+metadata/_custom_type_script = "uid://gdcaqo533anm"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1080348441]
+scale = Vector2(0.5, 0.5)
+tile_set = SubResource("TileSet_j2tah")
+
+[node name="Player" parent="." unique_id=1336915041 instance=ExtResource("2_iyuqh")]
+position = Vector2(379, 576)
+
+[node name="ChamberGoal" parent="." unique_id=926119434 instance=ExtResource("3_430dg")]
+position = Vector2(757, 596)
+
+[node name="Wooden_Box" parent="." unique_id=2042465066 instance=ExtResource("4_cvloe")]
+position = Vector2(1032, 638)
+
+[node name="Metal_Box" parent="." unique_id=1762953106 instance=ExtResource("5_t2eyp")]
+position = Vector2(1242, 641)
