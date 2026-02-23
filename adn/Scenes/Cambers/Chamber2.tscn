@@ -2,10 +2,9 @@
 
 [ext_resource type="TileSet" uid="uid://b1to5qe13l48j" path="res://tileSet.tres" id="1_imolu"]
 [ext_resource type="Script" uid="uid://gdcaqo533anm" path="res://Scenes/cameraFollow.gd" id="2_gmm4m"]
-[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxPrefab.tscn" id="2_vspvp"]
+[ext_resource type="PackedScene" uid="uid://clvpp76nyfslh" path="res://Scenes/Prefabs/parallaxFabrica.tscn" id="2_vspvp"]
 [ext_resource type="PackedScene" uid="uid://bfvy4s72ubmtm" path="res://Scenes/Player.tscn" id="3_14hbm"]
 [ext_resource type="PackedScene" uid="uid://dacqmkq31dlbg" path="res://Scenes/Prefabs/chamber_goal.tscn" id="4_ylfud"]
-[ext_resource type="PackedScene" path="res://Scenes/Prefabs/note_unlock.tscn" id="9_5hiie"]
 [ext_resource type="PackedScene" uid="uid://chtliicqcl60m" path="res://Scenes/Prefabs/death_trigger.tscn" id="7_d18n5"]
 [ext_resource type="PackedScene" uid="uid://dwdbmcgiomeqi" path="res://Scenes/Prefabs/note_unlock.tscn" id="9_5hiie"]
 
@@ -25,6 +24,7 @@ tile_map_data = PackedByteArray("AAD//wUABgAAAAQAAAD//wQABgAAAAQAAAD//wMABgAAAAQ
 tile_set = ExtResource("1_imolu")
 
 [node name="InvisibleLayer" type="TileMapLayer" parent="." unique_id=1832074503]
+visible = false
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAALAAcABgACAAMAAAALAAgABgACAAQAAAAMAAcABgACAAMAAAAMAAgABgACAAQAAAANAAcABgACAAMAAAANAAgABgACAAQAAAAOAAcABgACAAMAAAAOAAgABgACAAQAAAAPAAcABgACAAMAAAAPAAgABgACAAQAAAAQAAcABgACAAMAAAAQAAgABgACAAQAAAARAAcABgACAAMAAAARAAgABgACAAQAAAASAAcABgACAAMAAAASAAgABgACAAQAAAAKAAcABgACAAMAAAAKAAgABgACAAQAAAATAAcABgACAAMAAAATAAgABgACAAQAAAAIAAcABgABAAMAAAAIAAgABgAAAAMAAAAJAAcABgACAAMAAAAJAAgABgACAAQAAAAUAAcABgACAAMAAAAUAAgABgACAAQAAAAHAAIABgABAAMAAAAIAAIABgACAAMAAAAJAAIABgACAAMAAAAKAAIABgACAAMAAAALAAIABgAGAAMAAAAWAAcABgAGAAMAAAAWAAgABgAHAAMAAAAVAAcABgACAAMAAAAVAAgABgACAAQAAAASAAQABgABAAMAAAATAAQABgACAAMAAAAUAAQABgACAAMAAAAVAAQABgACAAMAAAAWAAQABgACAAMAAAAXAAQABgACAAMAAAAYAAQABgACAAMAAAAZAAQABgAGAAMAAAAFAAcABgAGAAMAAAAEAAMABgAGAAMAAAAcAAUABgABAAMAAAA=")
 tile_set = ExtResource("1_imolu")
